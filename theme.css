@@ -1,0 +1,145 @@
+/* === BODY === */
+body {
+	--background-primary: rgb(13, 17, 23);
+	--background-secondary: rgb(22, 27, 34);
+}
+
+/* === HIGHLIGHT === */
+.cm-s-obsidian span.cm-highlight, .markdown-rendered mark {
+    background-color: rgb(255, 50, 50);
+    color: rgb(255, 255, 255);
+}
+
+/* === HEADINGS === */
+.markdown-preview-view h1 {
+	color: rgb(255, 255, 255);
+	font-size: 1.5em;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	background: linear-gradient(135deg, rgb(255, 193, 7), rgb(0, 220, 222));
+	border-radius: 10px;
+	padding: 10px;	letter-spacing: 1px;
+}
+
+.markdown-preview-view h2 {
+	color: rgb(126, 231, 135);
+	font-size: 1.4em;
+	font-weight: 650;
+	text-align: left;
+	background: linear-gradient(135deg, rgba(126, 231, 135, 0.1), rgba(126, 231, 135, 0.5));
+	border: solid rgb(76, 175, 80);
+	border-width: 0px 0px 1px 0px;
+	border-radius: 8px;
+	padding: 5px;
+	letter-spacing: 0.5px;
+}
+
+.markdown-preview-view h3 {
+	color: rgb(68, 147, 248);
+	font-size: 1.3em;
+	font-weight: 600;
+	text-align: left;
+	background: linear-gradient(135deg, rgba(68, 147, 248, 0.08), rgba(68, 147, 248, 0.4));
+	border: solid rgb(68, 147, 248);
+	border-width: 0px 0px 1px 0px;
+	border-radius: 6px;
+	padding: 4px 4px 4px 1em;
+	letter-spacing: 0.5px;
+}
+
+.markdown-preview-view h4 {
+	color: rgb(148, 72, 248);
+	font-size: 1.2em;
+	font-weight: 550;
+	text-align: left;
+	background: linear-gradient(135deg, rgba(148, 72, 248, 0.06), rgba(148, 72, 248, 0.3));
+	border: solid rgb(148, 72, 248);
+	border-width: 0px 0px 1px 0px;
+	border-radius: 4px;
+	padding: 3px 3px 3px 2em;
+	letter-spacing: 0.5px;
+}
+
+.markdown-preview-view h5 {
+	color: rgb(248, 138, 68);
+	font-size: 1.1em;
+	font-weight: 500;
+	text-align: left;
+	background: linear-gradient(135deg, rgba(248, 138, 68, 0.04), rgba(248, 138, 68, 0.2));
+	border: solid rgb(248, 138, 68);
+	border-width: 0px 0px 1px 0px;
+	border-radius: 3px;
+	padding: 2px 2px 2px 3em;
+	letter-spacing: 0.5px;
+}
+
+.markdown-preview-view h6 {
+	color: rgb(248, 68, 68);
+	font-size: 1em;
+	font-weight: 450;
+	text-align: left;
+	background: linear-gradient(135deg, rgba(248, 68, 68, 0.02), rgba(248, 68, 68, 0.1));
+	border: solid rgb(248, 68, 68);
+	border-width: 0px 0px 1px 0px;
+	border-radius: 2px;
+	padding: 1px 1px 1px 4em;
+	letter-spacing: 0.5px;
+}
+
+/* === HEADINGS HOVER === */
+.markdown-preview-view h1:hover,
+.markdown-preview-view h2:hover,
+.markdown-preview-view h3:hover,
+.markdown-preview-view h4:hover,
+.markdown-preview-view h5:hover,
+.markdown-preview-view h6:hover {
+	border-width: 1px 1px 1px 1px;
+}
+
+/* === LINKS === */
+body a {
+	text-decoration: none;
+}
+body a:hover {
+	text-decoration: underline;
+	font-size: 1.1em;
+	font-weight: 700;
+}
+
+/* === CODE === */
+body code,
+body pre {
+	background-color: rgb(22, 27, 34);
+	color: #d2d2d2;
+	border-radius: 6px;
+	padding: 0.2em 0.4em;
+}
+body pre {
+	padding: 1em;
+	overflow: auto;
+}
+
+/* === BLOCKQUOTES === */
+body blockquote {
+	border-left: 4px solid #30363d;
+	padding-left: 1em;
+	color: #8b949e;
+	margin: 1em 0;
+}
+
+/* === CHECKBOXES === */
+body input[type="checkbox"]:checked {
+	accent-color: #58a6ff;
+}
+
+/* === ACTIVE LINE === */
+body .cm-activeLine {
+	background-color: rgba(110, 118, 129, 0.1);
+}
+
+/* === SELECTION === */
+body ::selection {
+	background: rgba(56, 139, 253, 0.4);
+	color: #ffffff;
+}
