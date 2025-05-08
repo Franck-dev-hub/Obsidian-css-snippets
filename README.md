@@ -5,7 +5,7 @@ This repository contains a collection of custom CSS snippets designed to enhance
 ### 📁 Snippet Files
 - **`banner.css`**: Styles for custom banners, including images, icons, descriptions, and integration with plugins like Canvas and Breadcrumbs.
 - **`tooltip.css`**: Styles for tooltips with customizable colors and directional -arrows.
- **`theme.css`**: Custom theme with styles for titles, links, quotes, code blocks, and active lines, using modern gradients.
+- **`theme.css`**: Custom theme with styles for titles, links, quotes, code blocks, and active lines, using modern gradients.
 - **`subfolder_colored.css`**: Applies custom colors to folders and subfolders in the navigation panel, with hover animations.
 - **`progressbar.css`**: Animated progress bars for task list checkboxes, dynamically adjusted.
 - **`empty_tab.css`**: Styles for empty tabs with animations and responsive SVG logos.
@@ -17,7 +17,7 @@ This repository contains a collection of custom CSS snippets designed to enhance
 
 ## 🚀 Getting Started
 ### ✅ Prerequisites
-- Obsidian installed on your system.
+- `Obsidian` installed on your system.
 - Access to Obsidian's CSS snippets settings.
 
 ### 📥 Installation and run
@@ -35,7 +35,7 @@ If you encounter any issues:
 - Check for conflicts with other snippets or themes.
 
 ## 👥 Authors
-- Franck-dev-hub (Franck S.)
+- Franck-dev-hub - Franck S. - Initial development and design.
 
 ## 📝 Version History
 * **v1.3.0**: Create theme.css file for main theme
