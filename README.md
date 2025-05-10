@@ -44,7 +44,7 @@ If you encounter any issues:
 * **v1.0.0**: Initial release
 
 ## 📜 License
-- This project is licensed under MIT Licence - see the LICENSE.txt file for details.
+- This project is licensed under GNU GPL v3.0 - see the LICENSE file for details.
 
 ## 💖 Acknowledgments
 - Inspiration and code adapted from the Obsidian community.
