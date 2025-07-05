@@ -1,5 +1,5 @@
-/* Color palette for notes and folders */
 :root {
+    /* Color palette for notes and folders */
     --note-color-1: rgba(137, 220, 235, 0.95);
     --note-color-2: rgba(116, 199, 236, 0.95);
     --note-color-3: rgba(135, 176, 249, 0.95);
@@ -49,14 +49,14 @@
     --nav-glow-effect: 0 0 20px rgba(99, 102, 241, 0.3);
 }
 
-/* Main container for file navigation */
+/* File navigation container styles */
 .nav-files-container {
     border-left: 3px solid rgba(255, 255, 255, 0.15);
     padding-left: 12px;
     position: relative;
 }
 
-/* Base styles for files and folders */
+/* File and folder base styles */
 .nav-files-container .nav-file,
 .nav-files-container .nav-folder {
     background: var(--folder-color);
@@ -119,7 +119,6 @@
     opacity: 0;
 }
 
-/* Cyclic colors for notes */
 .nav-files-container .nav-file:nth-child(11n + 2) {
     --folder-color: var(--note-color-1);
 }
@@ -164,7 +163,6 @@
     --folder-color: var(--note-color-11);
 }
 
-/* Cyclic colors for level 1 folders */
 .nav-files-container>div>.nav-folder:nth-child(12n + 2) {
     --folder-color: var(--folder-color-1);
 }
@@ -213,7 +211,6 @@
     --folder-color: var(--folder-color-12);
 }
 
-/* Cyclic colors for level 2 folders */
 .nav-files-container .nav-folder-children>.nav-folder:nth-child(11n + 2) {
     --folder-color: var(--folder2-color-1);
 }
@@ -258,7 +255,6 @@
     --folder-color: var(--folder2-color-11);
 }
 
-/* Enhanced hover effects */
 .nav-files-container .nav-file:hover:not(:has(.nav-file:hover, .nav-folder:hover)),
 .nav-files-container .nav-folder:hover:not(:has(.nav-file:hover, .nav-folder:hover)) {
     filter: saturate(1.2) brightness(1.1) contrast(1.05);
@@ -305,7 +301,6 @@
     transition: filter 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Progressive fade-in animation for child elements */
 .nav-folder-children .nav-file,
 .nav-folder-children .nav-folder {
     animation: staggerFadeIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -337,7 +332,6 @@
     animation-delay: 0.25s;
 }
 
-/* Highlight for active note */
 .nav-file-title.is-active {
     color: rgba(0, 0, 0, 0.95);
     font-weight: 700;
@@ -388,7 +382,6 @@
     }
 }
 
-/* Dark mode: adjust shadows and contrast */
 @media (prefers-color-scheme: dark) {
     :root {
         --nav-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);

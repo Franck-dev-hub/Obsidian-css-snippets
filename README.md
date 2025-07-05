@@ -4,7 +4,7 @@ This repository contains a collection of custom CSS snippets designed to enhance
 
 ### 📁 Snippet Files
 - **`banner.css`**: Styles for custom banners, including images, icons, descriptions, and integration with plugins like Canvas and Breadcrumbs.
-- **`tooltip.css`**: Styles for tooltips with customizable colors and directional -arrows.
+- **`tooltip.css`**: Styles for tooltips with customizable colors and directional arrows.
 - **`theme.css`**: Custom theme with styles for titles, links, quotes, code blocks, and active lines, using modern gradients.
 - **`subfolder_colored.css`**: Applies custom colors to folders and subfolders in the navigation panel, with hover animations.
 - **`progressbar.css`**: Animated progress bars for task list checkboxes, dynamically adjusted.
@@ -22,8 +22,12 @@ This repository contains a collection of custom CSS snippets designed to enhance
 
 ### 📥 Installation and run
 1. Clone or download this repository.
-2. Place the desired CSS files in your Obsidian CSS snippets folder.
-3. Enable the snippets via Obsidian settings.
+2. Place the desired CSS files in your Obsidian CSS snippets folder:
+   - Windows: `[VAULT_NAME]\.obsidian\snippets\`
+   - Linux: `[VAULT_NAME]/.obsidian/snippets/`
+3. Enable the snippets via Obsidian settings:
+   - Go to Settings → Appearance → CSS snippets
+   - Toggle the desired snippets on/off
 
 ## 💡 Usage
 - Each snippet can be individually enabled or disabled in the Obsidian settings.
@@ -33,11 +37,15 @@ This repository contains a collection of custom CSS snippets designed to enhance
 If you encounter any issues:
 - Ensure the CSS snippets are enabled.
 - Check for conflicts with other snippets or themes.
+- Test snippets individually to isolate conflicts.
+- Check Obsidian's console for error messages.
+- Verify file paths and permissions.
 
 ## 👥 Authors
 - Franck-dev-hub - Franck S. - Initial development and design.
 
 ## 📝 Version History
+* **v1.4.0**: Complete reshaping
 * **v1.3.0**: Create theme.css file for main theme
 * **v1.2.0**: Change child color for subfolder_colored.css
 * **v1.1.0**: Various bug fixes and optimizations
@@ -48,3 +56,4 @@ If you encounter any issues:
 
 ## 💖 Acknowledgments
 - Inspiration and code adapted from the Obsidian community.
+- Special thanks to the Obsidian developers for their work.

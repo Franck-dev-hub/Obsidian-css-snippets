@@ -1,9 +1,11 @@
-body.markdown-preview-view .callout-icon > svg {
+/* Callout icon and title styles for Obsidian */
+
+body.markdown-preview-view .callout-icon>svg {
   width: 48px;
   height: 48px;
 }
 
-.callout > .callout-title > .callout-icon {
+.callout>.callout-title>.callout-icon {
   --icon-size: 48px;
   opacity: 0.3;
   position: absolute;

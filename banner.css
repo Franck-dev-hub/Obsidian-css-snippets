@@ -1,12 +1,4 @@
-
-body {
-  --bannericon-wh: 5em;
-  --bannericon-top: 5.5em;
-  --bannerimg-height: 11em;
-  --bannericon-circle-radius: 5em;
-  --bannericon-square-radius: 0.75em;
-  --bannericon-border-width: 0.175em;
-}
+/* Banner image and icon styles for Obsidian */
 
 .markdown-reading-view .bannerimg {
   padding-bottom: 2em !important;
@@ -66,13 +58,12 @@ span[src$="bannericoncc"] img {
   border-radius: var(--bannericon-circle-radius) !important;
 }
 
-/*=======Title Align Center=======*/
+/* Banner title alignment */
 .banner-title-center .inline-title {
   text-align: center !important;
 }
 
-/*=======CallOut Support=======*/
-/*Banner Image*/
+/* Banner callout content layout */
 .callout[data-callout="bannerimage"] .callout-content {
   top: 0;
   left: 0;
@@ -85,30 +76,25 @@ span[src$="bannericoncc"] img {
   object-fit: inherit !important;
 }
 
-.callout[data-callout="bannerimage"] .callout-content > p,
-.callout[data-callout="bannerimage"] .callout-content > p > span {
+.callout[data-callout="bannerimage"] .callout-content>p,
+.callout[data-callout="bannerimage"] .callout-content>p>span {
   margin: unset;
   object-fit: inherit;
 }
 
-.callout[data-callout="bannerimage"] .callout-content > p > span > img {
+.callout[data-callout="bannerimage"] .callout-content>p>span>img {
   margin: unset;
   width: 1000000em !important;
   height: 10em;
   object-fit: cover;
 }
 
-/*Description left and Description center*/
-.description
-  .markdown-preview-sizer.markdown-preview-section
-  > .mod-header
-  > .inline-title {
+.description .markdown-preview-sizer.markdown-preview-section>.mod-header>.inline-title {
   margin-bottom: calc(5 * var(--inline-title-margin-bottom));
 }
 
-.markdown-reading-view
-  .callout[data-callout="bannerdescription"]
-  .callout-content {
+/* Banner description callout */
+.markdown-reading-view .callout[data-callout="bannerdescription"] .callout-content {
   top: 13.55em;
   overflow: hidden;
   position: absolute;
@@ -119,7 +105,6 @@ span[src$="bannericoncc"] img {
 .canvas .callout[data-callout="bannerdescription"] .callout-content {
   top: 13.55em;
   overflow: hidden;
-  /*position: absolute;*/
   left: var(--h1-style);
   border-left: var(--h1-style) solid;
 }
@@ -128,11 +113,10 @@ span[src$="bannericoncc"] img {
   left: 0;
   top: 13.55em;
   overflow: hidden;
-  /*position: absolute;*/
   border-left: var(--h1-style) solid;
 }
 
-.callout[data-callout="bannerdescription"] .callout-content > p {
+.callout[data-callout="bannerdescription"] .callout-content>p {
   padding-top: 8px;
   font-size: var(--size-4-3);
   color: var(--color-base-60);
@@ -140,18 +124,13 @@ span[src$="bannericoncc"] img {
   text-overflow: ellipsis !important;
   border-top: 2px solid var(--color-base-100);
   margin-right: calc(var(--file-margins) * 2);
-  border-image: linear-gradient(
-      to right,
+  border-image: linear-gradient(to right,
       var(--color-base-100),
-      var(--color-base-00)
-    ) 1;
+      var(--color-base-00)) 1;
 }
 
-.markdown-reading-view
-  .callout[data-callout="bannerdescriptionc"]
-  .callout-content
-  > p,
-.canvas .callout[data-callout="bannerdescriptionc"] .callout-content > p {
+.markdown-reading-view .callout[data-callout="bannerdescriptionc"] .callout-content>p,
+.canvas .callout[data-callout="bannerdescriptionc"] .callout-content>p {
   padding-top: 8px;
   text-align: center;
   font-size: var(--size-4-3);
@@ -159,24 +138,17 @@ span[src$="bannericoncc"] img {
   height: calc(var(--size-4-4) * 2);
   text-overflow: ellipsis !important;
   border-top: 2px solid var(--color-base-100);
-  border-image: linear-gradient(
-      to right,
+  border-image: linear-gradient(to right,
       var(--color-base-00),
       var(--color-base-100),
-      var(--color-base-00)
-    ) 1;
+      var(--color-base-00)) 1;
 }
 
-.markdown-reading-view
-  .callout[data-callout="bannerdescriptionc"]
-  .callout-content
-  > p {
+.markdown-reading-view .callout[data-callout="bannerdescriptionc"] .callout-content>p {
   width: 100% !important;
 }
 
-.markdown-reading-view
-  .callout[data-callout="bannerdescriptionc"]
-  .callout-content {
+.markdown-reading-view .callout[data-callout="bannerdescriptionc"] .callout-content {
   position: absolute;
   left: 0;
   top: 13.55em;
@@ -185,7 +157,7 @@ span[src$="bannericoncc"] img {
   overflow: hidden;
 }
 
-/*Left square Icon*/
+/* Banner icon styles */
 .callout[data-callout="bannericonl"] .callout-content {
   top: 5.5em;
   overflow: visible;
@@ -193,7 +165,7 @@ span[src$="bannericoncc"] img {
   left: var(--h1-style);
 }
 
-.callout[data-callout="bannericonl"] .callout-content > p {
+.callout[data-callout="bannericonl"] .callout-content>p {
   display: flex;
   font-size: 5em;
   aspect-ratio: 1;
@@ -208,7 +180,7 @@ span[src$="bannericoncc"] img {
   object-fit: inherit;
 }
 
-.callout[data-callout="bannericonl"] .callout-content > p > span > img {
+.callout[data-callout="bannericonl"] .callout-content>p>span>img {
   display: flex;
   aspect-ratio: 1;
   box-shadow: var(--shadow-l);
@@ -221,7 +193,6 @@ span[src$="bannericoncc"] img {
   border-radius: var(--bannericon-square-radius) !important;
 }
 
-/* Left Circle Icon*/
 .callout[data-callout="bannericonlc"] .callout-content {
   top: 5.5em;
   overflow: visible;
@@ -229,7 +200,7 @@ span[src$="bannericoncc"] img {
   left: var(--h1-style);
 }
 
-.callout[data-callout="bannericonlc"] .callout-content > p {
+.callout[data-callout="bannericonlc"] .callout-content>p {
   display: flex;
   font-size: 5em;
   aspect-ratio: 1;
@@ -244,7 +215,7 @@ span[src$="bannericoncc"] img {
   object-fit: inherit;
 }
 
-.callout[data-callout="bannericonlc"] .callout-content > p > span > img {
+.callout[data-callout="bannericonlc"] .callout-content>p>span>img {
   display: flex;
   aspect-ratio: 1;
   box-shadow: var(--shadow-l);
@@ -257,7 +228,6 @@ span[src$="bannericoncc"] img {
   left: var(--h1-style);
 }
 
-/*Center square Icon*/
 .callout[data-callout="bannericonc"] .callout-content {
   top: 5.5em;
   display: flex;
@@ -266,7 +236,7 @@ span[src$="bannericoncc"] img {
   left: calc(50% - 2.5em);
 }
 
-.callout[data-callout="bannericonc"] .callout-content > p {
+.callout[data-callout="bannericonc"] .callout-content>p {
   display: flex;
   font-size: 5em;
   aspect-ratio: 1;
@@ -281,7 +251,7 @@ span[src$="bannericoncc"] img {
   object-fit: inherit;
 }
 
-.callout[data-callout="bannericonc"] .callout-content > p > span > img {
+.callout[data-callout="bannericonc"] .callout-content>p>span>img {
   display: flex;
   aspect-ratio: 1;
   box-shadow: var(--shadow-l);
@@ -294,7 +264,6 @@ span[src$="bannericoncc"] img {
   border-radius: var(--bannericon-square-radius) !important;
 }
 
-/*Center Circle Icon*/
 .callout[data-callout="bannericoncc"] .callout-content {
   top: 5.5em;
   overflow: visible;
@@ -302,7 +271,7 @@ span[src$="bannericoncc"] img {
   left: calc(50% - 40px);
 }
 
-.callout[data-callout="bannericoncc"] .callout-content > p {
+.callout[data-callout="bannericoncc"] .callout-content>p {
   display: flex;
   font-size: 5em;
   aspect-ratio: 1;
@@ -317,7 +286,7 @@ span[src$="bannericoncc"] img {
   object-fit: inherit;
 }
 
-.callout[data-callout="bannericoncc"] .callout-content > p > span > img {
+.callout[data-callout="bannericoncc"] .callout-content>p>span>img {
   display: flex;
   aspect-ratio: 1;
   box-shadow: var(--shadow-l);
@@ -330,7 +299,6 @@ span[src$="bannericoncc"] img {
   left: var(--h1-style);
 }
 
-/*Hide Default CallOut Style*/
 .callout[data-callout="banner"] .callout-title,
 .callout[data-callout="banner"] .callout-icon,
 .callout[data-callout="banner"] .callout-icon::after,
@@ -398,14 +366,11 @@ span[src$="bannericoncc"] img {
   top: 20em;
 }
 
-/*=======Plugin Support=======*/
-/*Strange New World*/
 .snw-reference[data-snw-reallink$="bannerimg"],
 .snw-reference[data-snw-reallink*="bannericon"] {
   display: none !important;
 }
 
-/*Breadcrumbs*/
 .bannerimg .BC-trail,
 .bannericon .BC-trail {
   padding: 5px;
@@ -414,40 +379,26 @@ span[src$="bannericoncc"] img {
   border: 1px solid var(--background-modifier-border);
 }
 
-.bannerimg
-  .BC-trail
-  .markdown-reading-view
-  > .markdown-preview-view.is-readable-line-width,
+.bannerimg .BC-trail .markdown-reading-view>.markdown-preview-view.is-readable-line-width,
 .markdown-source-view.is-readable-line-width .cm-sizer {
   padding-top: unset;
 }
 
-/*Canvas*/
-.canvas-node-content.markdown-embed
-  > .markdown-embed-content
-  > .markdown-preview-view:has([alt*="bannerimg"])::before {
+.canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view:has([alt*="bannerimg"])::before {
   content: unset !important;
 }
 
-.canvas
-  .description
-  .markdown-preview-sizer.markdown-preview-section
-  > .mod-header
-  > .inline-title {
+.canvas .description .markdown-preview-sizer.markdown-preview-section>.mod-header>.inline-title {
   margin-bottom: unset;
 }
 
-.canvas-node-content.markdown-embed
-  > .markdown-embed-content
-  > .markdown-preview-view::before,
-.canvas-node-content.markdown-embed
-  > .markdown-embed-content
-  > .markdown-preview-view::after {
+.canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view::before,
+.canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view::after {
   content: none;
   display: block;
 }
 
-.canvas .callout[data-callout="bannerdescriptionc"] .callout-content > p {
+.canvas .callout[data-callout="bannerdescriptionc"] .callout-content>p {
   margin-left: calc(var(--file-margins));
   margin-right: calc(var(--file-margins));
 }
