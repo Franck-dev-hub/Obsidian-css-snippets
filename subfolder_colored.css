@@ -1,154 +1,398 @@
-/* ========== Notes ========== */
-/* Style of all notes */
+/* Color palette for notes and folders */
+:root {
+    --note-color-1: rgba(137, 220, 235, 0.95);
+    --note-color-2: rgba(116, 199, 236, 0.95);
+    --note-color-3: rgba(135, 176, 249, 0.95);
+    --note-color-4: rgba(180, 190, 254, 0.95);
+    --note-color-5: rgba(203, 166, 247, 0.95);
+    --note-color-6: rgba(245, 140, 130, 0.95);
+    --note-color-7: rgba(235, 160, 172, 0.95);
+    --note-color-8: rgba(250, 179, 135, 0.95);
+    --note-color-9: rgba(249, 226, 175, 0.95);
+    --note-color-10: rgba(166, 227, 161, 0.95);
+    --note-color-11: rgba(148, 226, 213, 0.95);
+    --folder-color-1: rgb(251, 128, 114);
+    --folder-color-2: rgb(141, 211, 199);
+    --folder-color-3: rgb(255, 255, 179);
+    --folder-color-4: rgb(190, 186, 218);
+    --folder-color-5: rgb(128, 177, 211);
+    --folder-color-6: rgb(253, 180, 98);
+    --folder-color-7: rgb(179, 222, 105);
+    --folder-color-8: rgb(252, 205, 229);
+    --folder-color-9: rgb(217, 217, 217);
+    --folder-color-10: rgb(188, 128, 189);
+    --folder-color-11: rgb(204, 235, 197);
+    --folder-color-12: rgb(255, 237, 111);
+    --folder2-color-1: rgb(137, 220, 235);
+    --folder2-color-2: rgb(116, 199, 236);
+    --folder2-color-3: rgb(135, 176, 249);
+    --folder2-color-4: rgb(180, 190, 254);
+    --folder2-color-5: rgb(203, 166, 247);
+    --folder2-color-6: rgb(245, 140, 130);
+    --folder2-color-7: rgb(235, 160, 172);
+    --folder2-color-8: rgb(250, 179, 135);
+    --folder2-color-9: rgb(249, 226, 175);
+    --folder2-color-10: rgb(166, 227, 161);
+    --folder2-color-11: rgb(148, 226, 213);
+    --nav-border-radius: 12px;
+    --nav-transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --nav-hover-shadow: 0 12px 32px rgba(0, 0, 0, 0.18), 0 4px 12px rgba(0, 0, 0, 0.12);
+    --nav-active-shadow: 0 16px 40px rgba(0, 0, 0, 0.25), 0 6px 16px rgba(0, 0, 0, 0.15);
+    --nav-hover-transform: translateY(-3px) scale(1.025);
+    --nav-active-transform: translateY(-4px) scale(1.03);
+    --nav-gradient-overlay: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.35) 100%);
+    --nav-gradient-primary: linear-gradient(135deg, rgba(99, 102, 241, 0.85), rgba(168, 85, 247, 0.85));
+    --nav-gradient-secondary: linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(147, 51, 234, 0.9));
+    --nav-border-hover: 2px solid rgba(255, 255, 255, 0.6);
+    --nav-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    --nav-hover-blur: blur(0px);
+    --nav-glow-effect: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+/* Main container for file navigation */
 .nav-files-container {
-border-left: 3px solid rgba(255, 255, 255, 0.1);
-  padding-left: 6px;
+    border-left: 3px solid rgba(255, 255, 255, 0.15);
+    padding-left: 12px;
+    position: relative;
 }
 
-/* Colour of notes */
+/* Base styles for files and folders */
+.nav-files-container .nav-file,
+.nav-files-container .nav-folder {
+    background: var(--folder-color);
+    --nav-item-color: rgba(0, 0, 0, 0.9);
+    --nav-item-color-hover: rgba(255, 255, 255, 0.98);
+    --nav-collapse-icon-color: rgba(0, 0, 0, 0.8);
+    border-radius: var(--nav-border-radius);
+    transition: var(--nav-transition);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(8px);
+    margin: 0;
+    --glow-opacity: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(99, 102, 241, var(--glow-opacity));
+}
+
+.nav-files-container .nav-file .nav-file-title,
+.nav-files-container .nav-folder .nav-folder-title {
+    color: var(--nav-item-color);
+    text-shadow: var(--nav-text-shadow);
+    position: relative;
+    z-index: 3;
+    font-weight: 500;
+}
+
+.nav-files-container .nav-file::before,
+.nav-files-container .nav-folder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--nav-gradient-overlay);
+    transform: translateX(-120%) skewX(-15deg);
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1;
+    pointer-events: none;
+    border-radius: var(--nav-border-radius);
+}
+
+.nav-files-container .nav-file::after,
+.nav-files-container .nav-folder::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--nav-gradient-primary);
+    transform: scaleX(0) scaleY(0.8);
+    transform-origin: left center;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 0;
+    pointer-events: none;
+    border-radius: var(--nav-border-radius);
+    opacity: 0;
+}
+
+/* Cyclic colors for notes */
 .nav-files-container .nav-file:nth-child(11n + 2) {
-  --folder-color: rgba(137, 220, 235, 0.95);
+    --folder-color: var(--note-color-1);
 }
+
 .nav-files-container .nav-file:nth-child(11n + 3) {
-  --folder-color: rgba(116, 199, 236, 0.95);
+    --folder-color: var(--note-color-2);
 }
+
 .nav-files-container .nav-file:nth-child(11n + 4) {
-  --folder-color: rgba(135, 176, 249, 0.95);
+    --folder-color: var(--note-color-3);
 }
+
 .nav-files-container .nav-file:nth-child(11n + 5) {
-  --folder-color: rgba(180, 190, 254, 0.95);
+    --folder-color: var(--note-color-4);
 }
+
 .nav-files-container .nav-file:nth-child(11n + 6) {
-  --folder-color: rgba(203, 166, 247, 0.95);
+    --folder-color: var(--note-color-5);
 }
+
 .nav-files-container .nav-file:nth-child(11n + 7) {
-  --folder-color: rgba(245, 140, 130, 0.95);
+    --folder-color: var(--note-color-6);
 }
+
 .nav-files-container .nav-file:nth-child(11n + 8) {
-  --folder-color: rgba(235, 160, 172, 0.95);
+    --folder-color: var(--note-color-7);
 }
+
 .nav-files-container .nav-file:nth-child(11n + 9) {
-  --folder-color: rgba(250, 179, 135, 0.95);
+    --folder-color: var(--note-color-8);
 }
+
 .nav-files-container .nav-file:nth-child(11n + 10) {
-  --folder-color: rgba(249, 226, 175, 0.95);
+    --folder-color: var(--note-color-9);
 }
+
 .nav-files-container .nav-file:nth-child(11n + 11) {
-  --folder-color: rgba(166, 227, 161, 0.95);
+    --folder-color: var(--note-color-10);
 }
+
 .nav-files-container .nav-file:nth-child(11n + 12) {
-  --folder-color: rgba(148, 226, 213, 0.95);
+    --folder-color: var(--note-color-11);
 }
 
-/* Active note */
+/* Cyclic colors for level 1 folders */
+.nav-files-container>div>.nav-folder:nth-child(12n + 2) {
+    --folder-color: var(--folder-color-1);
+}
+
+.nav-files-container>div>.nav-folder:nth-child(12n + 3) {
+    --folder-color: var(--folder-color-2);
+}
+
+.nav-files-container>div>.nav-folder:nth-child(12n + 4) {
+    --folder-color: var(--folder-color-3);
+}
+
+.nav-files-container>div>.nav-folder:nth-child(12n + 5) {
+    --folder-color: var(--folder-color-4);
+}
+
+.nav-files-container>div>.nav-folder:nth-child(12n + 6) {
+    --folder-color: var(--folder-color-5);
+}
+
+.nav-files-container>div>.nav-folder:nth-child(12n + 7) {
+    --folder-color: var(--folder-color-6);
+}
+
+.nav-files-container>div>.nav-folder:nth-child(12n + 8) {
+    --folder-color: var(--folder-color-7);
+}
+
+.nav-files-container>div>.nav-folder:nth-child(12n + 9) {
+    --folder-color: var(--folder-color-8);
+}
+
+.nav-files-container>div>.nav-folder:nth-child(12n + 10) {
+    --folder-color: var(--folder-color-9);
+}
+
+.nav-files-container>div>.nav-folder:nth-child(12n + 11) {
+    --folder-color: var(--folder-color-10);
+}
+
+.nav-files-container>div>.nav-folder:nth-child(12n + 12) {
+    --folder-color: var(--folder-color-11);
+}
+
+.nav-files-container>div>.nav-folder:nth-child(12n + 13) {
+    --folder-color: var(--folder-color-12);
+}
+
+/* Cyclic colors for level 2 folders */
+.nav-files-container .nav-folder-children>.nav-folder:nth-child(11n + 2) {
+    --folder-color: var(--folder2-color-1);
+}
+
+.nav-files-container .nav-folder-children>.nav-folder:nth-child(11n + 3) {
+    --folder-color: var(--folder2-color-2);
+}
+
+.nav-files-container .nav-folder-children>.nav-folder:nth-child(11n + 4) {
+    --folder-color: var(--folder2-color-3);
+}
+
+.nav-files-container .nav-folder-children>.nav-folder:nth-child(11n + 5) {
+    --folder-color: var(--folder2-color-4);
+}
+
+.nav-files-container .nav-folder-children>.nav-folder:nth-child(11n + 6) {
+    --folder-color: var(--folder2-color-5);
+}
+
+.nav-files-container .nav-folder-children>.nav-folder:nth-child(11n + 7) {
+    --folder-color: var(--folder2-color-6);
+}
+
+.nav-files-container .nav-folder-children>.nav-folder:nth-child(11n + 8) {
+    --folder-color: var(--folder2-color-7);
+}
+
+.nav-files-container .nav-folder-children>.nav-folder:nth-child(11n + 9) {
+    --folder-color: var(--folder2-color-8);
+}
+
+.nav-files-container .nav-folder-children>.nav-folder:nth-child(11n + 10) {
+    --folder-color: var(--folder2-color-9);
+}
+
+.nav-files-container .nav-folder-children>.nav-folder:nth-child(11n + 11) {
+    --folder-color: var(--folder2-color-10);
+}
+
+.nav-files-container .nav-folder-children>.nav-folder:nth-child(11n + 12) {
+    --folder-color: var(--folder2-color-11);
+}
+
+/* Enhanced hover effects */
+.nav-files-container .nav-file:hover:not(:has(.nav-file:hover, .nav-folder:hover)),
+.nav-files-container .nav-folder:hover:not(:has(.nav-file:hover, .nav-folder:hover)) {
+    filter: saturate(1.2) brightness(1.1) contrast(1.05);
+    transform: var(--nav-hover-transform);
+    box-shadow: var(--nav-hover-shadow);
+    border: var(--nav-border-hover);
+    z-index: 15;
+    --glow-opacity: 0.4;
+    backdrop-filter: blur(12px);
+}
+
+.nav-files-container .nav-file:hover:not(:has(.nav-file:hover, .nav-folder:hover)) .nav-file-title,
+.nav-files-container .nav-folder:hover:not(:has(.nav-file:hover, .nav-folder:hover)) .nav-folder-title {
+    color: var(--nav-item-color-hover);
+    transform: translateX(6px) scale(1.05);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.nav-files-container .nav-file:hover:not(:has(.nav-file:hover, .nav-folder:hover))::before,
+.nav-files-container .nav-folder:hover:not(:has(.nav-file:hover, .nav-folder:hover))::before {
+    transform: translateX(120%) skewX(-15deg);
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-files-container .nav-file:hover:not(:has(.nav-file:hover, .nav-folder:hover))::after,
+.nav-files-container .nav-folder:hover:not(:has(.nav-file:hover, .nav-folder:hover))::after {
+    transform: scaleX(1) scaleY(1);
+    opacity: 1;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-files-container .nav-file:hover:not(:has(.nav-file:hover, .nav-folder:hover)) .nav-folder-collapse-indicator,
+.nav-files-container .nav-folder:hover:not(:has(.nav-file:hover, .nav-folder:hover)) .nav-folder-collapse-indicator {
+    transform: scale(1.2) rotate(15deg);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    filter: brightness(1.3) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.nav-files-container .nav-folder:hover .nav-folder-children .nav-file,
+.nav-files-container .nav-folder:hover .nav-folder-children .nav-folder {
+    filter: brightness(1.02) saturate(1.05);
+    transition: filter 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Progressive fade-in animation for child elements */
+.nav-folder-children .nav-file,
+.nav-folder-children .nav-folder {
+    animation: staggerFadeIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-fill-mode: both;
+}
+
+.nav-folder-children .nav-file:nth-child(1),
+.nav-folder-children .nav-folder:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.nav-folder-children .nav-file:nth-child(2),
+.nav-folder-children .nav-folder:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.nav-folder-children .nav-file:nth-child(3),
+.nav-folder-children .nav-folder:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.nav-folder-children .nav-file:nth-child(4),
+.nav-folder-children .nav-folder:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.nav-folder-children .nav-file:nth-child(5),
+.nav-folder-children .nav-folder:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+/* Highlight for active note */
 .nav-file-title.is-active {
-  color: black;
-  font-weight: 700;
-  font-style: italic;
+    color: rgba(0, 0, 0, 0.95);
+    font-weight: 700;
+    font-style: italic;
+    position: relative;
+    z-index: 3;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.5px;
 }
+
+.nav-files-container .nav-file:has(.nav-file-title.is-active) {
+    transform: var(--nav-active-transform);
+    box-shadow: var(--nav-active-shadow);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    --glow-opacity: 0.6;
+    filter: saturate(1.3) brightness(1.15);
+}
+
+.nav-files-container .nav-file:hover .nav-file-title.is-active {
+    color: rgba(255, 255, 255, 0.98);
+    font-weight: 700;
+    transform: translateX(8px) scale(1.08);
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.8px;
+}
+
 .nav-file-title.is-active::before {
-  content: "👉";
-  font-weight: 700;
-  font-style: italic;
+    content: "👉";
+    font-weight: 700;
+    font-style: italic;
 }
+
 .nav-file-title.is-active::after {
-  content: "👈";
-  font-weight: 700;
-  font-style: italic;
+    content: "👈";
+    font-weight: 700;
+    font-style: italic;
 }
 
+@keyframes staggerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px) scale(0.98);
+    }
 
-/* ========== Folders + Notes ========== */
-/* Hover effect */
-.nav-files-container .nav-file:hover,
-.nav-files-container .nav-folder:hover {
-  filter: saturate(1.1);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 4px 8px rgba(0, 0, 0, 0.5);
-  transition: all 0.2s ease-in-out;
-}
-
-
-/* ========== Folders  ========== */
-/* Style of all folders */
-.nav-files-container .nav-file, /* Notes */
-.nav-files-container .nav-folder /* Dossiers */ {
-  background-color: var(--folder-color);
-  --nav-item-color: black;
-  --nav-item-color-hover: black;
-  --nav-collapse-icon-color: black;
-  border-radius: 6px;
-  transition: transform 0.2s ease, box-shadow 0.5s ease;
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
-/* 1st folder level */
-.nav-files-container > div > .nav-folder:nth-child(12n + 2) {
-  --folder-color: rgb(251, 128, 114);
-}
-.nav-files-container > div > .nav-folder:nth-child(12n + 3) {
-  --folder-color: rgb(141, 211, 199);
-}
-.nav-files-container > div > .nav-folder:nth-child(12n + 4) {
-  --folder-color: rgb(255, 255, 179);
-}
-.nav-files-container > div > .nav-folder:nth-child(12n + 5) {
-  --folder-color: rgb(190, 186, 218);
-}
-.nav-files-container > div > .nav-folder:nth-child(12n + 6) {
-  --folder-color: rgb(128, 177, 211);
-}
-.nav-files-container > div > .nav-folder:nth-child(12n + 7) {
-  --folder-color: rgb(253, 180, 98);
-}
-.nav-files-container > div > .nav-folder:nth-child(12n + 8) {
-  --folder-color: rgb(179, 222, 105);
-}
-.nav-files-container > div > .nav-folder:nth-child(12n + 9) {
-  --folder-color: rgb(252, 205, 229);
-}
-.nav-files-container > div > .nav-folder:nth-child(12n + 10) {
-  --folder-color: rgb(217, 217, 217);
-}
-.nav-files-container > div > .nav-folder:nth-child(12n + 11) {
-  --folder-color: rgb(188, 128, 189);
-}
-.nav-files-container > div > .nav-folder:nth-child(12n + 12) {
-  --folder-color: rgb(204, 235, 197);
-}
-.nav-files-container > div > .nav-folder:nth-child(12n + 13) {
-  --folder-color: rgb(255, 237, 111);
-}
-
-/* 2nd folder level */
-.nav-files-container .nav-folder-children > .nav-folder:nth-child(11n + 2) {
-  --folder-color: rgb(137, 220, 235);
-}
-.nav-files-container .nav-folder-children > .nav-folder:nth-child(11n + 3) {
-  --folder-color: rgb(116, 199, 236);
-}
-.nav-files-container .nav-folder-children > .nav-folder:nth-child(11n + 4) {
-  --folder-color: rgb(135, 176, 249);
-}
-.nav-files-container .nav-folder-children > .nav-folder:nth-child(11n + 5) {
-  --folder-color: rgb(180, 190, 254);
-}
-.nav-files-container .nav-folder-children > .nav-folder:nth-child(11n + 6) {
-  --folder-color: rgb(203, 166, 247);
-}
-.nav-files-container .nav-folder-children > .nav-folder:nth-child(11n + 7) {
-  --folder-color: rgb(245, 140, 130);
-}
-.nav-files-container .nav-folder-children > .nav-folder:nth-child(11n + 8) {
-  --folder-color: rgb(235, 160, 172);
-}
-.nav-files-container .nav-folder-children > .nav-folder:nth-child(11n + 9) {
-  --folder-color: rgb(250, 179, 135);
-}
-.nav-files-container .nav-folder-children > .nav-folder:nth-child(11n + 10) {
-  --folder-color: rgb(249, 226, 175);
-}
-.nav-files-container .nav-folder-children > .nav-folder:nth-child(11n + 11) {
-  --folder-color: rgb(166, 227, 161);
-}
-.nav-files-container .nav-folder-children > .nav-folder:nth-child(11n + 12) {
-  --folder-color: rgb(148, 226, 213);
+/* Dark mode: adjust shadows and contrast */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --nav-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        --nav-hover-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
+        --nav-active-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 6px 16px rgba(0, 0, 0, 0.4);
+    }
 }
