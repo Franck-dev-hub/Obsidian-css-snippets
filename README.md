@@ -45,6 +45,7 @@ If you encounter any issues:
 - Franck-dev-hub - Franck S. - Initial development and design.
 
 ## 📝 Version History
+* **v1.6.0**: Add light mode + refactor hue logic.
 * **v1.5.0**: Enhance code and colors
 * **v1.4.0**: Complete reshaping
 * **v1.3.0**: Create theme.css file for main theme

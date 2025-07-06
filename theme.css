@@ -1,33 +1,73 @@
 /* ===== CSS VARIABLES ===== */
 .theme-dark {
-	/* Background Colors - Modern Dark Theme */
-	--background-primary: #1a1a1a;
-	--background-secondary: #1a1a2a;
-	--background-tertiary: #16213e;
+	/* Background Colors - Dark Theme */
+	--bg-base: hsl(220, 0%, 10%);
+	--bg-second: hsl(from var(--bg-base) h calc(s + 10) calc(l + 10));
 
 	/* Transition and Effects */
 	--transition-speed: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	--hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.1);
-	--active-shadow: 0 12px 35px rgba(0, 0, 0, 0.25), 0 6px 15px rgba(0, 0, 0, 0.15);
+
+	/* Base colors */
+	--title-1: hsl(240, 75%, 65%);
+	--title-2: hsl(190, 75%, 55%);
+	--title-3: hsl(140, 75%, 55%);
+	--title-4: hsl(45, 75%, 55%);
+	--title-5: hsl(270, 45%, 55%);
+	--title-6: hsl(10, 60%, 55%);
+	--mark: hsl(0, 80%, 60%);
+	--strong: var(--mark);
+	--italic: hsl(160, 85%, 40%);
+	--links: hsl(230, 75%, 65%);
+	--blockquote: hsl(240, 80%, 70%);
+	--scrollbar: hsl(200, 100%, 75%);
 
 	/* Gradient colors */
-	--primary-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-	--secondary-gradient: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
-	--accent-gradient: linear-gradient(135deg, #845ec2 0%, #2c73d2 100%);
-	--success-gradient: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
-	--warning-gradient: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
-	--info-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);;
-	--dark-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-	--neutral-gradient: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+	--title-1-gradient: linear-gradient(135deg, var(--title-1) 0%, hsl(from var(--title-1) calc(h + 20) s calc(l - 10)) 100%);
+	--title-2-gradient: linear-gradient(135deg, var(--title-2) 0%, hsl(from var(--title-2) calc(h + 20) s calc(l - 10)) 100%);
+	--title-3-gradient: linear-gradient(135deg, var(--title-3) 0%, hsl(from var(--title-3) calc(h + 20) s calc(l - 10)) 100%);
+	--title-4-gradient: linear-gradient(135deg, var(--title-4) 0%, hsl(from var(--title-4) calc(h + 20) s calc(l - 10)) 100%);
+	--title-5-gradient: linear-gradient(135deg, var(--title-5) 0%, hsl(from var(--title-5) calc(h - 20) s calc(l - 10)) 100%);
+	--title-6-gradient: linear-gradient(135deg, var(--title-6) 0%, hsl(from var(--title-6) calc(h + 20) s calc(l - 10)) 100%);
+}
+
+.theme-light {
+	/* Background Colors - Light Theme */
+	--bg-base: hsl(0, 0%, 90%);
+	--bg-second: hsl(from var(--bg-base) h calc(s + 5) calc(l - 10));
+
+	/* Transition and Effects */
+	--transition-speed: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+	/* Base colors */
+	--title-1: hsl(240, 90%, 70%);
+	--title-2: hsl(190, 90%, 70%);
+	--title-3: hsl(270, 45%, 70%);
+	--title-4: hsl(45, 75%, 70%);
+	--title-5: hsl(10, 70%, 70%);
+	--title-6: hsl(140, 90%, 70%);
+	--mark: hsl(0, 80%, 70%);
+	--strong: var(--mark);
+	--italic: hsl(160, 85%, 70%);
+	--links: hsl(230, 75%, 80%);
+	--blockquote: hsl(240, 80%, 80%);
+
+	/* Gradient colors */
+	--title-1-gradient: linear-gradient(135deg, var(--title-1) 0%, hsl(from var(--title-1) calc(h + 20) s calc(l + 10)) 100%);
+	--title-2-gradient: linear-gradient(135deg, var(--title-2) 0%, hsl(from var(--title-2) calc(h + 20) s calc(l + 10)) 100%);
+	--title-3-gradient: linear-gradient(135deg, var(--title-3) 0%, hsl(from var(--title-3) calc(h + 20) s calc(l + 10)) 100%);
+	--title-4-gradient: linear-gradient(135deg, var(--title-4) 0%, hsl(from var(--title-4) calc(h + 20) s calc(l + 10)) 100%);
+	--title-5-gradient: linear-gradient(135deg, var(--title-5) 0%, hsl(from var(--title-5) calc(h + 20) s calc(l + 10)) 100%);
+	--title-6-gradient: linear-gradient(135deg, var(--title-6) 0%, hsl(from var(--title-6) calc(h + 20) s calc(l + 10)) 100%);
 }
 
 /* ===== MARKDOWN PREVIEW VIEW ===== */
 .markdown-preview-view {
+	font-size: 14px; /* 16px by default */
 	animation: fadeIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
 	/* ===== HEADINGS ===== */
 	h1,	h2,	h3,	h4,	h5,	h6 {
-		color: rgb(255, 255, 255) !important;
+		color: var(--bg-base);
 		text-align: left;
 		transition: var(--transition-speed);
 		position: relative;
@@ -53,7 +93,7 @@
 	}
 
 	h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
-		border: 2px solid rgba(255, 255, 255, 1);
+		border: 2px solid white;
 		filter: saturate(1.1) brightness(1.05);
 	}
 
@@ -63,7 +103,7 @@
 		font-weight: 800;
 		text-transform: uppercase;
 		text-align: center;
-		background: var(--primary-gradient);
+		background: var(--title-1-gradient);
 		border-radius: 15px;
 		padding: 15px;
 		letter-spacing: 2px;
@@ -73,7 +113,7 @@
 	h2 {
 		font-size: 1.4em;
 		font-weight: 700;
-		background: var(--secondary-gradient);
+		background: var(--title-2-gradient);
 		border-radius: 12px;
 		padding: 12px 15px;
 		letter-spacing: 1px;
@@ -84,7 +124,7 @@
 	h3 {
 		font-size: 1.3em;
 		font-weight: 600;
-		background: var(--accent-gradient);
+		background: var(--title-3-gradient);
 		border-radius: 10px;
 		padding: 10px 12px;
 		letter-spacing: 0.8px;
@@ -95,7 +135,7 @@
 	h4 {
 		font-size: 1.2em;
 		font-weight: 600;
-		background: var(--success-gradient);
+		background: var(--title-4-gradient);
 		border-radius: 8px;
 		padding: 8px 10px;
 		letter-spacing: 0.6px;
@@ -105,8 +145,7 @@
 	/* H5 - Minor Title */
 	h5 {
 		font-size: 1.1em;
-		font-weight: 500;
-		background: var(--warning-gradient);
+		background: var(--title-5-gradient);
 		border-radius: 6px;
 		padding: 6px 8px;
 		letter-spacing: 0.5px;
@@ -116,8 +155,7 @@
 	/* H6 - Smallest Title */
 	h6 {
 		font-size: 1em;
-		font-weight: 500;
-		background: var(--info-gradient);
+		background: var(--title-6-gradient);
 		border-radius: 5px;
 		padding: 5px 7px;
 		letter-spacing: 0.4px;
@@ -129,8 +167,7 @@
 		text-decoration: none;
 		position: relative;
 		transition: var(--transition-speed);
-		color: #667eea;
-		font-weight: 500;
+		color: var(--links);
 		padding-bottom: 2px;
 	}
 
@@ -141,7 +178,7 @@
 		height: 2px;
 		bottom: 0;
 		left: 0;
-		background: var(--primary-gradient);
+		background: var(--title-1-gradient);
 		transition: width var(--transition-speed);
 		border-radius: 1px;
 	}
@@ -149,7 +186,7 @@
 	a:hover {
 		text-decoration: none;
 		font-weight: 600;
-		color: #3b82f6;
+		color: hsl(from var(--links) h s calc(l + 15));
 	}
 
 	a:hover::after {
@@ -158,13 +195,17 @@
 
 	/* ===== TEXT FORMATTING ===== */
 	strong {
-		color: #f5576c;
+		color: var(--mark);
 		font-weight: 700;
 		font-size: 1.1em;
 		text-decoration: none;
 		position: relative;
 		transition: var(--transition-speed);
 		padding-bottom: 2px;
+	}
+
+	strong:hover {
+		color: hsl(from var(--mark) h calc(s + 20) l);
 	}
 
 	strong::after {
@@ -174,7 +215,7 @@
 		height: 2px;
 		bottom: 0;
 		left: 0;
-		background: #f43f5e;
+		background: hsl(from var(--strong) h calc(s + 20) calc(l - 10));
 		transition: width var(--transition-speed);
 		border-radius: 1px;
 	}
@@ -197,7 +238,7 @@
 		height: 2px;
 		bottom: 0;
 		left: 0;
-		background: #10b981;
+		background: var(--italic);
 		transition: width var(--transition-speed);
 		border-radius: 1px;
 	}
@@ -247,7 +288,7 @@
 		left: 0;
 		right: 0;
 		height: 4px;
-		background: var(--primary-gradient);
+		background: var(--title-1-gradient);
 		border-radius: 8px 8px 0 0;
 		opacity: 0;
 		transition: opacity var(--transition-speed);
@@ -259,9 +300,9 @@
 
 	/* ===== BLOCKQUOTES ===== */
 	blockquote {
-		border-left: 4px solid #667eea;
+		border-left: 4px solid var(--blockquote);
 		padding: 1.2em 1.5em;
-		color: #e8eaed;
+		color: white;
 		margin: 1.5em 0;
 		transition: var(--transition-speed);
 		position: relative;
@@ -271,7 +312,7 @@
 	}
 
 	blockquote:hover {
-		border-left-color: #764ba2;
+		border-left-color: hsl(from var(--blockquote) calc(h + 20) s calc(l - 10));
 		background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
 		filter: brightness(1.05);
 	}
@@ -282,7 +323,7 @@
 		top: -15px;
 		left: 15px;
 		font-size: 4em;
-		background: var(--primary-gradient);
+		background: var(--title-1-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
@@ -323,7 +364,7 @@
 	}
 
 	th {
-		background: var(--primary-gradient);
+		background: var(--title-1-gradient);
 		color: white;
 		padding: 6px 10px 6px 10px;
 		font-weight: 600;
@@ -332,7 +373,7 @@
 
 	td {
 		background: rgba(255, 255, 255, 0.05);
-		color: #e8eaed;
+		color: white;
 		padding: 6px 10px 6px 10px;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 		transition: var(--transition-speed);
@@ -347,7 +388,7 @@
 	input[type="checkbox"] {
 		transition: var(--transition-speed);
 		transform: scale(1.2);
-		accent-color: #667eea;
+		accent-color: var(--links);
 	}
 
 	input[type="checkbox"]:checked {
@@ -360,7 +401,7 @@
 
 	/* ===== FOCUS STATES ===== */
 	*:focus {
-		outline: 2px solid #667eea;
+		outline: 2px solid var(--links);
 		outline-offset: 3px;
 		border-radius: 6px;
 		transition: outline var(--transition-speed);
@@ -369,69 +410,18 @@
 
 /* ===== SELECTION STYLES ===== */
 .markdown-preview-view ::selection,
-.cm-editor ::selection,
-::selection {
+.cm-editor ::selection {
 	background: rgba(79, 250, 254, 0.35) !important;
-	color: #ffffff;
+	color: white;
 }
 
 /* ===== SCROLLBAR STYLES ===== */
-::-webkit-scrollbar {
-	width: 10px;
-	height: 10px;
-}
-
-::-webkit-scrollbar-track {
-	background: var(--background-secondary);
-	border-radius: 6px;
-}
-
 ::-webkit-scrollbar-thumb {
-	background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-	border-radius: 6px;
-	transition: var(--transition-speed);
+	background: linear-gradient(135deg, var(--scrollbar) 0%, hsl(from var(--scrollbar) calc(h - 10) s calc(l + 10)) 100%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-	transform: scaleY(1.2);
-}
-
-/* ===== NAVIGATION ELEMENTS ===== */
-.nav-folder-collapse-indicator,
-.nav-folder-children .nav-folder-collapse-indicator {
-	transition: var(--transition-speed);
-	transform-origin: center;
-	color: rgba(255, 255, 255, 0.7);
-	font-size: 1.1em;
-	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.nav-folder-collapse-indicator:hover,
-.nav-folder-children .nav-folder-collapse-indicator:hover {
-	color: #667eea;
-	transform: scale(1.2) rotate(15deg);
-	text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
-	filter: brightness(1.3);
-}
-
-.nav-folder.mod-root>.nav-folder-children .nav-folder-collapse-indicator {
-	color: rgba(255, 255, 255, 0.8);
-}
-
-.nav-folder.mod-root>.nav-folder-children .nav-folder-collapse-indicator:hover {
-	color: #667eea;
-	transform: scale(1.3) rotate(20deg);
-	text-shadow: 0 0 15px rgba(102, 126, 234, 0.6);
-}
-
-.nav-folder-children {
-	transition: all var(--transition-speed);
-	overflow: hidden;
-}
-
-.nav-folder-children.collapsed {
-	animation: collapseFolder 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	background: linear-gradient(135deg, hsl(from var(--scrollbar) calc(h - 20) s calc(l + 15)) 0%, var(--scrollbar) 100%);
 }
 
 /* ===== ANIMATIONS ===== */
@@ -439,24 +429,6 @@
 	0% {transform: scale(1.2);}
 	50% {transform: scale(1.4);}
 	100% {transform: scale(1.2);}
-}
-
-@keyframes activeLineGlow {
-	0% {
-		background: linear-gradient(90deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
-		box-shadow: inset 0 0 10px rgba(102, 126, 234, 0.1);
-	}
-
-	100% {
-		background: linear-gradient(90deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0.25) 100%);
-		box-shadow: inset 0 0 15px rgba(102, 126, 234, 0.2);
-	}
-}
-
-@keyframes selectionPulse {
-	0% {background: linear-gradient(90deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);}
-	50% {background: linear-gradient(90deg, rgba(102, 126, 234, 0.6) 0%, rgba(118, 75, 162, 0.6) 100%);}
-	100% {background: linear-gradient(90deg, rgba(102, 126, 234, 0.4) 0%, rgba(118, 75, 162, 0.4) 100%);}
 }
 
 @keyframes fadeIn {
@@ -475,20 +447,6 @@
 
 @keyframes pulse {
 	0%,
-	100% {background: rgba(225, 80, 80, 1);}
-	50% {background: rgba(225, 80, 80, 0.5);}
-}
-
-@keyframes collapseFolder {
-	0% {
-		opacity: 1;
-		transform: scaleY(1);
-		max-height: 1000px;
-	}
-
-	100% {
-		opacity: 0;
-		transform: scaleY(0);
-		max-height: 0;
-	}
+	100% {background: var(--mark);}
+	50% {background: hsl(from var(--mark) calc(h + 20) calc(s + 25) calc(l - 25));}
 }
