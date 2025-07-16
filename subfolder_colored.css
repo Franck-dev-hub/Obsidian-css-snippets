@@ -1,57 +1,55 @@
 :root {
     /* Color palette for notes and folders */
-    --note-color-1: rgba(137, 220, 235, 0.95);
-    --note-color-2: rgba(116, 199, 236, 0.95);
-    --note-color-3: rgba(135, 176, 249, 0.95);
-    --note-color-4: rgba(180, 190, 254, 0.95);
-    --note-color-5: rgba(203, 166, 247, 0.95);
-    --note-color-6: rgba(245, 140, 130, 0.95);
-    --note-color-7: rgba(235, 160, 172, 0.95);
-    --note-color-8: rgba(250, 179, 135, 0.95);
-    --note-color-9: rgba(249, 226, 175, 0.95);
-    --note-color-10: rgba(166, 227, 161, 0.95);
-    --note-color-11: rgba(148, 226, 213, 0.95);
-    --folder-color-1: rgb(251, 128, 114);
-    --folder-color-2: rgb(141, 211, 199);
-    --folder-color-3: rgb(255, 255, 179);
-    --folder-color-4: rgb(190, 186, 218);
-    --folder-color-5: rgb(128, 177, 211);
-    --folder-color-6: rgb(253, 180, 98);
-    --folder-color-7: rgb(179, 222, 105);
-    --folder-color-8: rgb(252, 205, 229);
-    --folder-color-9: rgb(217, 217, 217);
-    --folder-color-10: rgb(188, 128, 189);
-    --folder-color-11: rgb(204, 235, 197);
-    --folder-color-12: rgb(255, 237, 111);
-    --folder2-color-1: rgb(137, 220, 235);
-    --folder2-color-2: rgb(116, 199, 236);
-    --folder2-color-3: rgb(135, 176, 249);
-    --folder2-color-4: rgb(180, 190, 254);
-    --folder2-color-5: rgb(203, 166, 247);
-    --folder2-color-6: rgb(245, 140, 130);
-    --folder2-color-7: rgb(235, 160, 172);
-    --folder2-color-8: rgb(250, 179, 135);
-    --folder2-color-9: rgb(249, 226, 175);
-    --folder2-color-10: rgb(166, 227, 161);
-    --folder2-color-11: rgb(148, 226, 213);
+    --note-color-1: lch(83% 26 215);
+    --note-color-2: lch(76% 30 239);
+    --note-color-3: lch(71% 40 277);
+    --note-color-4: lch(78% 33 286);
+    --note-color-5: lch(73% 45 309);
+    --note-color-6: lch(70% 45 30);
+    --note-color-7: lch(73% 29 10);
+    --note-color-8: lch(78% 38 57);
+    --note-color-9: lch(90% 28 89);
+    --note-color-10: lch(84% 41 140);
+    --note-color-11: lch(84% 26 182);
+    --folder-color-1: lch(67% 54 32);
+    --folder-color-2: lch(79% 24 182);
+    --folder-color-3: lch(98% 38 107);
+    --folder-color-4: lch(76% 17 296);
+    --folder-color-5: lch(70% 23 251);
+    --folder-color-6: lch(78% 54 70);
+    --folder-color-7: lch(83% 61 121);
+    --folder-color-8: lch(87% 21 344);
+    --folder-color-9: lch(86% 0.01 297);
+    --folder-color-10: lch(61% 40 325);
+    --folder-color-11: lch(90% 22 138);
+    --folder-color-12: lch(93% 62 98);
+    --folder2-color-1: lch(83% 26 215);
+    --folder2-color-2: lch(76% 30 239);
+    --folder2-color-3: lch(71% 41 277);
+    --folder2-color-4: lch(78% 34 288);
+    --folder2-color-5: lch(74% 45 309);
+    --folder2-color-6: lch(69% 45 30);
+    --folder2-color-7: lch(73% 30 10);
+    --folder2-color-8: lch(78% 38 57);
+    --folder2-color-9: lch(90% 27 89);
+    --folder2-color-10: lch(84% 41 140);
+    --folder2-color-11: lch(84% 26 182);
     --nav-border-radius: 12px;
     --nav-transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --nav-hover-shadow: 0 12px 32px rgba(0, 0, 0, 0.18), 0 4px 12px rgba(0, 0, 0, 0.12);
-    --nav-active-shadow: 0 16px 40px rgba(0, 0, 0, 0.25), 0 6px 16px rgba(0, 0, 0, 0.15);
-    --nav-hover-transform: translateY(-3px) scale(1.025);
-    --nav-active-transform: translateY(-4px) scale(1.03);
-    --nav-gradient-overlay: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.35) 100%);
-    --nav-gradient-primary: linear-gradient(135deg, rgba(99, 102, 241, 0.85), rgba(168, 85, 247, 0.85));
-    --nav-gradient-secondary: linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(147, 51, 234, 0.9));
-    --nav-border-hover: 2px solid rgba(255, 255, 255, 0.6);
-    --nav-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    --nav-hover-shadow: 0 12px 32px lch(0% 0 0 / 0.18), 0 4px 12px lch(0% 0 0 / 0.12);
+    --nav-active-shadow: 0 16px 40px lch(0% 0 0 / 0.25), 0 6px 16px lch(0% 0 0 / 0.15);
+    --nav-gradient-overlay: linear-gradient(135deg, lch(100% 0.01 296.81 / 0.25) 0%, lch(100% 0.01 296.81 / 0.1) 50%, lch(100% 0.01 296.81 / 0.35) 100%);
+    --nav-gradient-primary: linear-gradient(135deg, lch(50.1% 80.42 298.77 / 0.85), lch(53.53% 92.47 312.67 / 0.85));
+    --nav-gradient-secondary: linear-gradient(135deg, lch(55.63% 66.78 285.24 / 0.9), lch(44.96% 102.55 313.21 / 0.9));
+    --nav-border-hover: 2px solid lch(100% 0.01 296.81 / 0.6);
+    --nav-text-shadow: 0 1px 3px lch(0% 0 0 / 0.12);
     --nav-hover-blur: blur(0px);
-    --nav-glow-effect: 0 0 20px rgba(99, 102, 241, 0.3);
+    --nav-glow-effect: 0 0 20px lch(50.1% 80.42 298.77 / 0.3);
 }
 
 /* File navigation container styles */
 .nav-files-container {
-    border-left: 3px solid rgba(255, 255, 255, 0.15);
+    border-left: 3px solid lch(100% 0.01 296.81 / 0.15);
     padding-left: 12px;
     position: relative;
 }
@@ -60,20 +58,20 @@
 .nav-files-container .nav-file,
 .nav-files-container .nav-folder {
     background: var(--folder-color);
-    --nav-item-color: rgba(0, 0, 0, 0.9);
-    --nav-item-color-hover: rgba(255, 255, 255, 0.98);
-    --nav-collapse-icon-color: rgba(0, 0, 0, 0.8);
+    --nav-item-color: lch(0% 0 0 / 0.9);
+    --nav-item-color-hover: lch(100% 0.01 296.81 / 0.98);
+    --nav-collapse-icon-color: lch(0% 0 0 / 0.8);
     border-radius: var(--nav-border-radius);
     transition: var(--nav-transition);
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid lch(100% 0.01 296.81 / 0.2);
+    box-shadow: 0 2px 8px lch(0% 0 0 / 0.08);
     backdrop-filter: blur(8px);
     margin: 0;
     --glow-opacity: 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(99, 102, 241, var(--glow-opacity));
+    box-shadow: 0 2px 8px lch(0% 0 0 / 0.08), 0 0 0 0 lch(50.1% 80.42 298.77 / var(--glow-opacity));
 }
 
 .nav-files-container .nav-file .nav-file-title,
@@ -255,13 +253,17 @@
     --folder-color: var(--folder2-color-11);
 }
 
+.nav-files-container .nav-folder-children .nav-file,
+.nav-files-container .nav-folder-children .nav-folder {
+    position: relative;
+    z-index: 2;
+}
+
 .nav-files-container .nav-file:hover:not(:has(.nav-file:hover, .nav-folder:hover)),
 .nav-files-container .nav-folder:hover:not(:has(.nav-file:hover, .nav-folder:hover)) {
     filter: saturate(1.2) brightness(1.1) contrast(1.05);
-    transform: var(--nav-hover-transform);
     box-shadow: var(--nav-hover-shadow);
     border: var(--nav-border-hover);
-    z-index: 15;
     --glow-opacity: 0.4;
     backdrop-filter: blur(12px);
 }
@@ -270,15 +272,9 @@
 .nav-files-container .nav-folder:hover:not(:has(.nav-file:hover, .nav-folder:hover)) .nav-folder-title {
     color: var(--nav-item-color-hover);
     transform: translateX(6px) scale(1.05);
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 2px 8px lch(0% 0 0 / 0.4);
     font-weight: 600;
     letter-spacing: 0.3px;
-}
-
-.nav-files-container .nav-file:hover:not(:has(.nav-file:hover, .nav-folder:hover))::before,
-.nav-files-container .nav-folder:hover:not(:has(.nav-file:hover, .nav-folder:hover))::before {
-    transform: translateX(120%) skewX(-15deg);
-    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .nav-files-container .nav-file:hover:not(:has(.nav-file:hover, .nav-folder:hover))::after,
@@ -292,7 +288,7 @@
 .nav-files-container .nav-folder:hover:not(:has(.nav-file:hover, .nav-folder:hover)) .nav-folder-collapse-indicator {
     transform: scale(1.2) rotate(15deg);
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    filter: brightness(1.3) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    filter: brightness(1.3) drop-shadow(0 2px 4px lch(0% 0 0 / 0.2));
 }
 
 .nav-files-container .nav-folder:hover .nav-folder-children .nav-file,
@@ -333,28 +329,27 @@
 }
 
 .nav-file-title.is-active {
-    color: rgba(0, 0, 0, 0.95);
+    color: lch(0% 0 0 / 0.95);
     font-weight: 700;
     font-style: italic;
     position: relative;
     z-index: 3;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 2px 6px lch(0% 0 0 / 0.25);
     letter-spacing: 0.5px;
 }
 
 .nav-files-container .nav-file:has(.nav-file-title.is-active) {
-    transform: var(--nav-active-transform);
     box-shadow: var(--nav-active-shadow);
-    border: 2px solid rgba(255, 255, 255, 0.8);
+    border: 2px solid lch(100% 0.01 296.81 / 0.8);
     --glow-opacity: 0.6;
     filter: saturate(1.3) brightness(1.15);
 }
 
 .nav-files-container .nav-file:hover .nav-file-title.is-active {
-    color: rgba(255, 255, 255, 0.98);
+    color: lch(100% 0.01 296.81 / 0.98);
     font-weight: 700;
     transform: translateX(8px) scale(1.08);
-    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 3px 12px lch(0% 0 0 / 0.5);
     letter-spacing: 0.8px;
 }
 
@@ -384,8 +379,8 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --nav-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-        --nav-hover-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
-        --nav-active-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 6px 16px rgba(0, 0, 0, 0.4);
+        --nav-text-shadow: 0 1px 3px lch(0% 0 0 / 0.3);
+        --nav-hover-shadow: 0 12px 32px lch(0% 0 0 / 0.4), 0 4px 12px lch(0% 0 0 / 0.3);
+        --nav-active-shadow: 0 16px 40px lch(0% 0 0 / 0.5), 0 6px 16px lch(0% 0 0 / 0.4);
     }
 }
