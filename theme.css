@@ -1,196 +1,112 @@
 /* ===== CSS VARIABLES ===== */
 .theme-dark {
 	/* Background Colors - Dark Theme */
-	--bg-base: hsl(220, 0%, 10%);
-	--bg-second: hsl(from var(--bg-base) h calc(s + 10) calc(l + 10));
-
-	/* Transition and Effects */
-	--transition-speed: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	--bg-primary: #16161D;
+	--bg-secondary: #1E1E28;
 
 	/* Base colors */
-	--title-1: hsl(240, 75%, 65%);
-	--title-2: hsl(190, 75%, 55%);
-	--title-3: hsl(140, 75%, 55%);
-	--title-4: hsl(45, 75%, 55%);
-	--title-5: hsl(270, 45%, 55%);
-	--title-6: hsl(10, 60%, 55%);
-	--mark: hsl(0, 80%, 60%);
+  --primary: #667EEA;
+  --secondary: #9066EA;
+
+	--title-1: #6262e8;
+	--title-2: #36c5e2;
+	--title-3: #36e26f;
+	--title-4: #e2b736;
+	--title-5: #8c58bf;
+	--title-6: #d15e47;
+
+	--mark: #d15e47;
 	--strong: var(--mark);
-	--italic: hsl(160, 85%, 40%);
-	--links: hsl(230, 75%, 65%);
-	--blockquote: hsl(240, 80%, 70%);
-	--scrollbar: hsl(200, 100%, 75%);
-
-	/* Gradient colors */
-	--title-1-gradient: linear-gradient(135deg, var(--title-1) 0%, hsl(from var(--title-1) calc(h + 20) s calc(l - 10)) 100%);
-	--title-2-gradient: linear-gradient(135deg, var(--title-2) 0%, hsl(from var(--title-2) calc(h + 20) s calc(l - 10)) 100%);
-	--title-3-gradient: linear-gradient(135deg, var(--title-3) 0%, hsl(from var(--title-3) calc(h + 20) s calc(l - 10)) 100%);
-	--title-4-gradient: linear-gradient(135deg, var(--title-4) 0%, hsl(from var(--title-4) calc(h + 20) s calc(l - 10)) 100%);
-	--title-5-gradient: linear-gradient(135deg, var(--title-5) 0%, hsl(from var(--title-5) calc(h - 20) s calc(l - 10)) 100%);
-	--title-6-gradient: linear-gradient(135deg, var(--title-6) 0%, hsl(from var(--title-6) calc(h + 20) s calc(l - 10)) 100%);
-}
-
-.theme-light {
-	/* Background Colors - Light Theme */
-	--bg-base: hsl(0, 0%, 90%);
-	--bg-second: hsl(from var(--bg-base) h calc(s + 5) calc(l - 10));
-
-	/* Transition and Effects */
-	--transition-speed: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-	/* Base colors */
-	--title-1: hsl(240, 90%, 70%);
-	--title-2: hsl(190, 90%, 70%);
-	--title-3: hsl(270, 45%, 70%);
-	--title-4: hsl(45, 75%, 70%);
-	--title-5: hsl(10, 70%, 70%);
-	--title-6: hsl(140, 90%, 70%);
-	--mark: hsl(0, 80%, 70%);
-	--strong: var(--mark);
-	--italic: hsl(160, 85%, 70%);
-	--links: hsl(230, 75%, 80%);
-	--blockquote: hsl(240, 80%, 80%);
-
-	/* Gradient colors */
-	--title-1-gradient: linear-gradient(135deg, var(--title-1) 0%, hsl(from var(--title-1) calc(h + 20) s calc(l + 10)) 100%);
-	--title-2-gradient: linear-gradient(135deg, var(--title-2) 0%, hsl(from var(--title-2) calc(h + 20) s calc(l + 10)) 100%);
-	--title-3-gradient: linear-gradient(135deg, var(--title-3) 0%, hsl(from var(--title-3) calc(h + 20) s calc(l + 10)) 100%);
-	--title-4-gradient: linear-gradient(135deg, var(--title-4) 0%, hsl(from var(--title-4) calc(h + 20) s calc(l + 10)) 100%);
-	--title-5-gradient: linear-gradient(135deg, var(--title-5) 0%, hsl(from var(--title-5) calc(h + 20) s calc(l + 10)) 100%);
-	--title-6-gradient: linear-gradient(135deg, var(--title-6) 0%, hsl(from var(--title-6) calc(h + 20) s calc(l + 10)) 100%);
+	--italic: #0fbc82;
+	--links: #6279e8;
+	--blockquote: #7575ef;
+	--scrollbar: #7fd4ff;
 }
 
 /* ===== MARKDOWN PREVIEW VIEW ===== */
 .markdown-preview-view {
-	font-size: 14px; /* 16px by default */
-	animation: fadeIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	animation: fadeIn 0.3s;
 
-	/* ===== HEADINGS ===== */
-	h1,	h2,	h3,	h4,	h5,	h6 {
-		color: var(--bg-base);
-		text-align: left;
-		transition: var(--transition-speed);
-		position: relative;
-		overflow: hidden;
-		border-radius: 15px;
-		letter-spacing: 2px;
-		backdrop-filter: blur(10px);
-	}
+  /* ===== HEADINGS ===== */
+  h1, h2, h3, h4, h5, h6 {
+    color: #FFF;
+    position: relative;
+    padding: 8px;
+  }
 
-	h1::before,	h2::before,	h3::before,	h4::before,	h5::before,	h6::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: -100%;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-		transition: left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-	}
+  h1 {
+    border-left: 6px solid var(--title-1);
+    background: color-mix(in srgb, var(--title-1), transparent 70%);
+    border-radius: 6px;
+    margin-left: 0px;
+  }
 
-	h1:hover::before, h2:hover::before,	h3:hover::before, h4:hover::before, h5:hover::before, h6:hover::before {
-		left: 100%;
-	}
+  h2 {
+    border-left: 5px solid var(--title-2);
+    background: color-mix(in srgb, var(--title-2), transparent 70%);
+    border-radius: 5px;
+    margin-left: 10px;
+  }
 
-	h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
-		border: 2px solid white;
-		filter: saturate(1.1) brightness(1.05);
-	}
+  h3 {
+    border-left: 4px solid var(--title-3);
+    background: color-mix(in srgb, var(--title-3), transparent 70%);
+    border-radius: 4px;
+    margin-left: 20px;
+  }
 
-	/* H1 - Main Title */
-	h1 {
-		font-size: 1.6em;
-		font-weight: 800;
-		text-transform: uppercase;
-		text-align: center;
-		background: var(--title-1-gradient);
-		border-radius: 15px;
-		padding: 5px;
-		letter-spacing: 2px;
-	}
+ h4 {
+    border-left: 3px solid var(--title-4);
+    background: color-mix(in srgb, var(--title-4), transparent 70%);
+    border-radius: 3px;
+    margin-left: 30px;
+  }
 
-	/* H2 - Section Title */
-	h2 {
-		font-size: 1.4em;
-		font-weight: 700;
-		background: var(--title-2-gradient);
-		border-radius: 12px;
-		padding: 5px 10px;
-		letter-spacing: 1px;
-		backdrop-filter: blur(8px);
-	}
+ h5 {
+    border-left: 2px solid var(--title-5);
+    background: color-mix(in srgb, var(--title-5), transparent 70%);
+    border-radius: 2px;
+    margin-left: 40px;
+  }
 
-	/* H3 - Subsection Title */
-	h3 {
-		font-size: 1.3em;
-		font-weight: 600;
-		background: var(--title-3-gradient);
-		border-radius: 10px;
-		padding: 5px 30px;
-		letter-spacing: 0.8px;
-		backdrop-filter: blur(6px);
-	}
+ h6 {
+    border-left: 1px solid var(--title-6);
+    background: color-mix(in srgb, var(--title-6), transparent 70%);
+    border-radius: 1px;
+    margin-left: 50px;
+  }
 
-	/* H4 - Sub-subsection Title */
-	h4 {
-		font-size: 1.2em;
-		font-weight: 600;
-		background: var(--title-4-gradient);
-		border-radius: 8px;
-		padding: 5px 50px;
-		letter-spacing: 0.6px;
-		backdrop-filter: blur(4px);
-	}
+  h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
 
-	/* H5 - Minor Title */
-	h5 {
-		font-size: 1.1em;
-		background: var(--title-5-gradient);
-		border-radius: 6px;
-		padding: 5px 70px;
-		letter-spacing: 0.5px;
-		backdrop-filter: blur(3px);
-	}
+  h1:before { content: "1"; background: var(--title-1); }
+  h2:before { content: "2"; background: var(--title-2); }
+  h3:before { content: "3"; background: var(--title-3); }
+  h4:before { content: "4"; background: var(--title-4); }
+  h5:before { content: "5"; background: var(--title-5); }
+  h6:before { content: "6"; background: var(--title-6); }
 
-	/* H6 - Smallest Title */
-	h6 {
-		font-size: 1em;
-		background: var(--title-6-gradient);
-		border-radius: 5px;
-		padding: 5px 90px;
-		letter-spacing: 0.4px;
-		backdrop-filter: blur(2px);
-	}
+  h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    box-shadow: 0 4px 8px #000;
+  }
 
 	/* ===== LINKS ===== */
 	a {
 		text-decoration: none;
-		position: relative;
 		transition: var(--transition-speed);
 		color: var(--links);
 		padding-bottom: 2px;
 	}
 
-	a::after {
-		content: '';
-		position: absolute;
-		width: 0;
-		height: 2px;
-		bottom: 0;
-		left: 0;
-		background: var(--title-1-gradient);
-		transition: width var(--transition-speed);
-		border-radius: 1px;
-	}
-
 	a:hover {
-		text-decoration: none;
 		font-weight: 600;
-		color: hsl(from var(--links) h s calc(l + 15));
-	}
-
-	a:hover::after {
-		width: 100%;
 	}
 
 	/* ===== TEXT FORMATTING ===== */
@@ -199,42 +115,18 @@
 		font-weight: 700;
 		font-size: 1.1em;
 		text-decoration: none;
-		position: relative;
 		transition: var(--transition-speed);
-		padding-bottom: 2px;
-	}
-
-	strong:hover {
-		color: hsl(from var(--mark) h calc(s + 20) l);
-	}
-
-	strong::after {
-		content: '';
-		position: absolute;
-		width: 0;
-		height: 2px;
-		bottom: 0;
-		left: 0;
-		background: hsl(from var(--strong) h calc(s + 20) calc(l - 10));
-		transition: width var(--transition-speed);
-		border-radius: 1px;
-	}
-
-	strong:hover::after {
-		width: 100%;
 	}
 
 	em {
-		text-decoration: none;
 		position: relative;
-		transition: var(--transition-speed);
 		padding-bottom: 2px;
 	}
 
 	em::after {
 		content: '';
 		position: absolute;
-		width: 0;
+		width: 100%;
 		height: 2px;
 		bottom: 0;
 		left: 0;
@@ -243,22 +135,12 @@
 		border-radius: 1px;
 	}
 
-	em:hover::after {
-		width: 100%;
-	}
-
 	mark {
 		color: white;
-		animation: pulse 5s infinite;
-		border-radius: 6px;
+		animation: pulse 3s infinite;
+		border-radius: 4px;
 		padding: 2px 6px;
 		font-weight: 600;
-	}
-
-	mark:hover {
-		outline-offset: 3px;
-		border-radius: 6px;
-		border: 1px solid white;
 	}
 
 	/* ===== CODE BLOCKS ===== */
@@ -268,7 +150,6 @@
 		padding: 3px 6px;
 		transition: var(--transition-speed);
 		border: 1px solid rgba(255, 255, 255, 0.2);
-		backdrop-filter: blur(4px);
 	}
 
 	pre {
@@ -278,81 +159,30 @@
 	}
 
 	pre:hover {
-		border: 1px solid white;
-	}
-
-	pre::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		height: 4px;
-		background: var(--title-1-gradient);
-		border-radius: 8px 8px 0 0;
-		opacity: 0;
-		transition: opacity var(--transition-speed);
-	}
-
-	pre:hover::before {
-		opacity: 1;
+		border: 1px solid var(--primary);
 	}
 
 	/* ===== BLOCKQUOTES ===== */
 	blockquote {
-		border-left: 4px solid var(--blockquote);
-		padding: 1.2em 1.5em;
+		border: 1px solid var(--blockquote);
+		padding: 1.5em;
 		color: white;
-		margin: 1.5em 0;
-		transition: var(--transition-speed);
-		position: relative;
 		background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-		border-radius: 0 12px 12px 0;
-		backdrop-filter: blur(6px);
+		border-radius: 12px;
 	}
 
 	blockquote:hover {
-		border-left-color: hsl(from var(--blockquote) calc(h + 20) s calc(l - 10));
 		background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
 		filter: brightness(1.05);
 	}
 
-	blockquote::before {
-		content: '"';
-		position: absolute;
-		top: -15px;
-		left: 15px;
-		font-size: 4em;
-		background: var(--title-1-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		opacity: 0.6;
-		font-family: serif;
-		transition: var(--transition-speed);
-		text-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
-	}
-
-	blockquote:hover::before {
-		opacity: 1;
-		transform: scale(1.2) rotate(-5deg);
-	}
-
 	/* ===== LISTS ===== */
-	ul,
-	ol {
-		transition: var(--transition-speed);
-	}
-
 	li {
-		transition: var(--transition-speed);
-		padding: 2px 0;
 		border-radius: 4px;
-	}
+}
 
 	li:hover {
-		background: linear-gradient(90deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-		padding-left: 2px;
+		background: linear-gradient(90deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
 	}
 
 	/* ===== TABLES ===== */
@@ -360,29 +190,34 @@
 		border-collapse: collapse;
 		border-radius: 8px;
 		overflow: hidden;
-		transition: var(--transition-speed);
+		cursor: default;
 	}
 
-	th {
-		background: var(--title-1-gradient);
+	thead {
+		background: var(--primary);
 		color: white;
 		padding: 4px 8px 4px 8px;
 		font-weight: 600;
-		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 	}
 
-	td {
+	tr {
 		background: rgba(255, 255, 255, 0.05);
 		color: white;
 		padding: 4px 8px 4px 8px;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-		transition: var(--transition-speed);
 	}
 
-	td:hover {
-		background: rgba(102, 126, 234, 0.1);
-		transform: translateX(2px);
+	tr:nth-child(2n+2) {
+		background: rgba(255, 255, 255, 0.05);
+		color: white;
+		padding: 4px 8px 4px 8px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	}
+
+tr:hover {
+	background: var(--secondary) !important;
+
+}
 
 	/* ===== FORM ELEMENTS ===== */
 	input[type="checkbox"] {
@@ -417,11 +252,7 @@
 
 /* ===== SCROLLBAR STYLES ===== */
 ::-webkit-scrollbar-thumb {
-	background: linear-gradient(135deg, var(--scrollbar) 0%, hsl(from var(--scrollbar) calc(h - 10) s calc(l + 10)) 100%);
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background: linear-gradient(135deg, hsl(from var(--scrollbar) calc(h - 20) s calc(l + 15)) 0%, var(--scrollbar) 100%);
+	background: linear-gradient(var(--primary));
 }
 
 /* ===== ANIMATIONS ===== */
