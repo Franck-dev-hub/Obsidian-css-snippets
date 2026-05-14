@@ -1,0 +1,124 @@
+/* API */
+.nav-folder-title[data-path$="/api" i] { color: #05d270; }
+.nav-folder-title[data-path$="/api" i] .nav-folder-title-content::before { content: "⚡ "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/api" i]) .nav-file-title { color: rgba(5, 210, 112, 0.8); }
+
+/* Assembleur */
+.nav-folder-title[data-path$="/assembleur" i] { color: #6e4c13; }
+.nav-folder-title[data-path$="/assembleur" i] .nav-folder-title-content::before { content: "⚙️ "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/assembleur" i]) .nav-file-title { color: rgba(110, 76, 19, 0.8); }
+
+/* Bash */
+.nav-folder-title[data-path$="/bash" i] { color: #4eaa25; }
+.nav-folder-title[data-path$="/bash" i] .nav-folder-title-content::before { content: "🐚 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/bash" i]) .nav-file-title { color: rgba(78, 170, 37, 0.8); }
+
+/* C */
+.nav-folder-title[data-path$="/c" i] { color: #a8b9cc; }
+.nav-folder-title[data-path$="/c" i] .nav-folder-title-content::before { content: "©️ "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/c" i]) .nav-file-title { color: rgba(168, 185, 204, 0.8); }
+
+/* C# */
+.nav-folder-title[data-path$="/c#" i] { color: #239120; }
+.nav-folder-title[data-path$="/c#" i] .nav-folder-title-content::before { content: "🎯 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/c#" i]) .nav-file-title { color: rgba(35, 145, 32, 0.8); }
+
+/* C++ */
+.nav-folder-title[data-path$="/c++" i] { color: #00599c; }
+.nav-folder-title[data-path$="/c++" i] .nav-folder-title-content::before { content: "➕ "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/c++" i]) .nav-file-title { color: rgba(0, 89, 156, 0.8); }
+
+/* Certbot */
+.nav-folder-title[data-path$="/certbot" i] { color: #ef3b39; }
+.nav-folder-title[data-path$="/certbot" i] .nav-folder-title-content::before { content: "🔒 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/certbot" i]) .nav-file-title { color: rgba(239, 59, 57, 0.8); }
+
+/* CSS */
+.nav-folder-title[data-path$="/css" i] { color: #1572b6; }
+.nav-folder-title[data-path$="/css" i] .nav-folder-title-content::before { content: "🎨 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/css" i]) .nav-file-title { color: rgba(21, 114, 182, 0.8); }
+
+/* Docker */
+.nav-folder-title[data-path$="/docker" i] { color: #2496ed; }
+.nav-folder-title[data-path$="/docker" i] .nav-folder-title-content::before { content: "🐳 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/docker" i]) .nav-file-title { color: rgba(36, 150, 237, 0.8); }
+
+/* Firefox */
+.nav-folder-title[data-path$="/firefox" i] { color: #ff7139; }
+.nav-folder-title[data-path$="/firefox" i] .nav-folder-title-content::before { content: "🦊 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/firefox" i]) .nav-file-title { color: rgba(255, 113, 57, 0.8); }
+
+/* GDScript */
+.nav-folder-title[data-path$="/gdscript" i] { color: #478cbf; }
+.nav-folder-title[data-path$="/gdscript" i] .nav-folder-title-content::before { content: "🎮 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/gdscript" i]) .nav-file-title { color: rgba(71, 140, 191, 0.8); }
+
+/* Git */
+.nav-folder-title[data-path$="/git" i] { color: #f05032; }
+.nav-folder-title[data-path$="/git" i] .nav-folder-title-content::before { content: "🌿 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/git" i]) .nav-file-title { color: rgba(240, 80, 50, 0.8); }
+
+/* HTML */
+.nav-folder-title[data-path$="/html" i] { color: #e34f26; }
+.nav-folder-title[data-path$="/html" i] .nav-folder-title-content::before { content: "🌐 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/html" i]) .nav-file-title { color: rgba(227, 79, 38, 0.8); }
+
+/* JS */
+.nav-folder-title[data-path$="/js" i] { color: #f7df1e; }
+.nav-folder-title[data-path$="/js" i] .nav-folder-title-content::before { content: "✨ "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/js" i]) .nav-file-title { color: rgba(247, 223, 30, 0.8); }
+
+/* Linux */
+.nav-folder-title[data-path$="/linux" i] { color: #fcc624; }
+.nav-folder-title[data-path$="/linux" i] .nav-folder-title-content::before { content: "🐧 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/linux" i]) .nav-file-title { color: rgba(252, 198, 36, 0.8); }
+
+/* Lua */
+.nav-folder-title[data-path$="/lua" i] { color: #000080; }
+.nav-folder-title[data-path$="/lua" i] .nav-folder-title-content::before { content: "🌙 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/lua" i]) .nav-file-title { color: rgba(0, 0, 128, 0.8); }
+
+/* Markdown */
+.nav-folder-title[data-path$="/markdown" i] { color: #ffffff; }
+.nav-folder-title[data-path$="/markdown" i] .nav-folder-title-content::before { content: "📝 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/markdown" i]) .nav-file-title { color: rgba(255, 255, 255, 0.7); }
+
+/* Mermaid */
+.nav-folder-title[data-path$="/mermaid" i] { color: #ff3785; }
+.nav-folder-title[data-path$="/mermaid" i] .nav-folder-title-content::before { content: "🧜‍♀️ "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/mermaid" i]) .nav-file-title { color: rgba(255, 55, 133, 0.7); }
+
+/* PHP */
+.nav-folder-title[data-path$="/php" i] { color: #777bb4; }
+.nav-folder-title[data-path$="/php" i] .nav-folder-title-content::before { content: "🐘 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/php" i]) .nav-file-title { color: rgba(119, 123, 180, 0.8); }
+
+/* Python */
+.nav-folder-title[data-path$="/python" i] { color: #3776ab; }
+.nav-folder-title[data-path$="/python" i] .nav-folder-title-content::before { content: "🐍 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/python" i]) .nav-file-title { color: rgba(55, 118, 171, 0.8); }
+
+/* Rust */
+.nav-folder-title[data-path$="/rust" i] { color: #dea584; }
+.nav-folder-title[data-path$="/rust" i] .nav-folder-title-content::before { content: "🦀 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/rust" i]) .nav-file-title { color: rgba(222, 165, 132, 0.8); }
+
+/* SQL */
+.nav-folder-title[data-path$="/sql" i] { color: #cc7832; }
+.nav-folder-title[data-path$="/sql" i] .nav-folder-title-content::before { content: "🗄️ "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/sql" i]) .nav-file-title { color: rgba(204, 120, 50, 0.8); }
+
+/* Sublime Text */
+.nav-folder-title[data-path$="/sublime text" i] { color: #ff9800; }
+.nav-folder-title[data-path$="/sublime text" i] .nav-folder-title-content::before { content: "🟠 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/sublime text" i]) .nav-file-title { color: rgba(255, 152, 0, 0.8); }
+
+/* TS */
+.nav-folder-title[data-path$="/ts" i] { color: #3178c6; }
+.nav-folder-title[data-path$="/ts" i] .nav-folder-title-content::before { content: "🔷 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/ts" i]) .nav-file-title { color: rgba(49, 120, 198, 0.8); }
+
+/* Windows */
+.nav-folder-title[data-path$="/windows" i] { color: #00a4ef; }
+.nav-folder-title[data-path$="/windows" i] .nav-folder-title-content::before { content: "🪟 "; }
+.nav-folder:has(> .nav-folder-title[data-path$="/windows" i]) .nav-file-title { color: rgba(0, 164, 239, 0.8); }
