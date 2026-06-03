@@ -30,7 +30,7 @@ If you encounter any issues:
 - Check Obsidian's console for error messages.
 - Verify file paths and permissions.
 
-## Authors
+## Author
 - Franck-dev-hub - Franck S. - Initial development and design.
 
 ## License
