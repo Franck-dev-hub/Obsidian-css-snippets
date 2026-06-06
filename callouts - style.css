@@ -1,52 +1,58 @@
-.callout-title {
-	background: var(--background-primary);
-	border: 0.9px solid rgba(var(--callout-color), 0.40);
-	padding: 1px;
-	border-radius: 8px;
-	margin-bottom: 10px;
-	box-shadow:
-    -14px 14px 39px -3px rgba(var(--callout-color), 0.20);
-}
-
-.theme-dark {
-
-.callout-title-inner {
-	padding-top: 0px
-}
-
-.callout[data-callout="multi-column"] {
-    margin-top: -15px;
-}
-
-}
-
-.theme-light {
+/* All callouts */
 .callout {
-	/* background: rgba(var(--callout-color), 0.05); */
-	background: linear-gradient(135deg, rgba(var(--callout-color), 0.04), var(--background-primary));
-	position: relative;
-	border: 1px solid rgba(var(--callout-color), 0.8);
+    border-radius: 4px;
 }
 
-.callout:not([data-callout="multi-column"]) {
-    border: 1px solid rgba(var(--callout-color), 0.8); 
+/* Native callouts */
+.callout[data-callout="caution"] {
+    --callout-color: 255, 50, 50;
+    --callout-icon: lucide-octagon-alert;
 }
 
-.callout-title {
-	background: var(--background-primary);
-	border: 1px solid rgba(var(--callout-color));
-	padding: 1px;
-	border-radius: 8px;
-	box-shadow:
-    -14px 14px 39px -3px rgba(var(--callout-color), 0.20);
+.callout[data-callout="exemple"] {
+    --callout-color: 20, 184, 166;
+    --callout-icon: lucide-pencil-ruler;
 }
 
-.callout-title-inner {
-	padding-top: 1px
+.callout[data-callout="important"] {
+    --callout-color: 168, 85, 247;
+    --callout-icon: lucide-message-circle-warning;
 }
 
-.callout[data-callout="multi-column"] {
-    margin-top: -15px;
+.callout[data-callout="info"] {
+    --callout-color: 41, 151, 255;
+    --callout-icon: lucide-info;
 }
 
+.callout[data-callout="question"] {
+    --callout-color: 251, 146, 60;
+    --callout-icon: lucide-help-circle;
 }
+
+.callout[data-callout="quote"] {
+    --callout-color: 148, 163, 184;
+    --callout-icon: lucide-quote;
+}
+
+.callout[data-callout="success"] {
+    --callout-color: 50, 255, 50;
+    --callout-icon: lucide-check-circle-2;
+}
+
+.callout[data-callout="tip"] {
+    --callout-color: 63, 185, 80;
+    --callout-icon: lucide-lightbulb;
+}
+
+.callout[data-callout="warning"] {
+    --callout-color: 255, 255, 50;
+    --callout-icon: lucide-triangle-alert;
+}
+
+
+
+
+
+
+/* Custom callouts */
+.callout[data-callout="custom alert"] {}
