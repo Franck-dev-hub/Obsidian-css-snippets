@@ -74,6 +74,10 @@
 .nav-folder-title[data-path$="/mermaid" i],
 .nav-folder-title[data-path="mermaid" i] { color: #000000; background-color: #ff3785; }
 
+/* Obsidian */
+.nav-folder-title[data-path$="/obsidian" i],
+.nav-folder-title[data-path="obsidian" i] { color: #ffffff; background-color: #8B5CF6; }
+
 /* Php */
 .nav-folder-title[data-path$="/php" i],
 .nav-folder-title[data-path="php" i] { color: #ffffff; background-color: #777BB3; }
@@ -105,6 +109,10 @@
 /* Ts */
 .nav-folder-title[data-path$="/ts" i],
 .nav-folder-title[data-path="ts" i] { color: #ffffff; background-color: #3178C6; }
+
+/* Ubuntu */
+.nav-folder-title[data-path$="/ubuntu" i],
+.nav-folder-title[data-path="ubuntu" i] { color: #ffffff; background-color: #E95420; }
 
 /* Windows */
 .nav-folder-title[data-path$="/windows" i],
