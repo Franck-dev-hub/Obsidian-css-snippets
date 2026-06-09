@@ -8,11 +8,13 @@
 .nav-folder:not(.is-collapsed):has(.nav-file-title.is-active) > .nav-folder-title:before {
     font-weight: 900;
     content: ">>>";
+    margin-right: 4px;
 }
 
 .nav-folder:not(.is-collapsed):has(.nav-file-title.is-active) > .nav-folder-title:after {
     font-weight: 900;
     content: "<<<";
+    margin-left: 4px;
 }
 
 /* Title of parent folder when has active file on hover*/
@@ -33,4 +35,16 @@
 /* Active file on hover */
 .nav-file-title.is-active:hover {
     background-color: var(--bg-primary) !important;
+}
+
+/* Text before the active file title*/
+.nav-file-title.is-active::before {
+    content: ">>>";
+    margin-right: 4px;
+}
+
+/* Text after the active file title*/
+.nav-file-title.is-active::after {
+    content: "<<<";
+    margin-left: 4px;
 }
