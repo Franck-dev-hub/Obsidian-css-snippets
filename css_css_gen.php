@@ -38,7 +38,7 @@ $folders = [
 function generateBlock(string $name, string $color, string $textColor): string {
     $title = ucwords($name);
     return "/* $title */\n"
-        . ".nav-folder-title[data-path*=\"$name\" i] ~ .nav-folder-children { border-left-color: $color; }\n"
+        . ".nav-folder-title[data-path*=\"$name\" i] ~ .nav-folder-children { border-left: 1px solid $color; }\n"
         . ".nav-folder-title[data-path*=\"$name\" i] .tree-item-inner,\n"
         . ".nav-file-title[data-path*=\"$name\" i] .tree-item-inner {\n"
         . "\tbackground-color: $color;\n"
