@@ -3,18 +3,8 @@
     background-color: var(--primary) !important;
 }
 
-/* Title of parent folder when has active file on hover*/
-.nav-folder:not(.is-collapsed):has(.nav-file-title.is-active) > .nav-folder-title:hover {
-    color: white;
-}
-
 /* Active file */
 .nav-file-title.is-active {
     font-style: italic;
     border: 1px solid var(--primary);
-}
-
-/* Active file on hover */
-.nav-file-title.is-active:hover {
-    background-color: var(--secondary) !important;
 }
