@@ -8,7 +8,7 @@
 }
 
 /* Api */
-.nav-folder-title[data-path*="api" i] ~ .nav-folder-children { border-left-color: #05d270; }
+.nav-folder-title[data-path*="api" i] ~ .nav-folder-children { border-left: 1px solid #05d270; }
 .nav-folder-title[data-path*="api" i] .tree-item-inner,
 .nav-file-title[data-path*="api" i] .tree-item-inner {
 	background-color: #05d270;
@@ -16,7 +16,7 @@
 }
 
 /* Assembleur */
-.nav-folder-title[data-path*="assembleur" i] ~ .nav-folder-children { border-left-color: #6e4c13; }
+.nav-folder-title[data-path*="assembleur" i] ~ .nav-folder-children { border-left: 1px solid #6e4c13; }
 .nav-folder-title[data-path*="assembleur" i] .tree-item-inner,
 .nav-file-title[data-path*="assembleur" i] .tree-item-inner {
 	background-color: #6e4c13;
@@ -24,7 +24,7 @@
 }
 
 /* Bash */
-.nav-folder-title[data-path*="bash" i] ~ .nav-folder-children { border-left-color: #4eaa25; }
+.nav-folder-title[data-path*="bash" i] ~ .nav-folder-children { border-left: 1px solid #4eaa25; }
 .nav-folder-title[data-path*="bash" i] .tree-item-inner,
 .nav-file-title[data-path*="bash" i] .tree-item-inner {
 	background-color: #4eaa25;
@@ -32,7 +32,7 @@
 }
 
 /* C */
-.nav-folder-title[data-path*="c" i] ~ .nav-folder-children { border-left-color: #659AD2; }
+.nav-folder-title[data-path*="c" i] ~ .nav-folder-children { border-left: 1px solid #659AD2; }
 .nav-folder-title[data-path*="c" i] .tree-item-inner,
 .nav-file-title[data-path*="c" i] .tree-item-inner {
 	background-color: #659AD2;
@@ -40,7 +40,7 @@
 }
 
 /* C# */
-.nav-folder-title[data-path*="c#" i] ~ .nav-folder-children { border-left-color: #9179E4; }
+.nav-folder-title[data-path*="c#" i] ~ .nav-folder-children { border-left: 1px solid #9179E4; }
 .nav-folder-title[data-path*="c#" i] .tree-item-inner,
 .nav-file-title[data-path*="c#" i] .tree-item-inner {
 	background-color: #9179E4;
@@ -48,7 +48,7 @@
 }
 
 /* C++ */
-.nav-folder-title[data-path*="c++" i] ~ .nav-folder-children { border-left-color: #00599c; }
+.nav-folder-title[data-path*="c++" i] ~ .nav-folder-children { border-left: 1px solid #00599c; }
 .nav-folder-title[data-path*="c++" i] .tree-item-inner,
 .nav-file-title[data-path*="c++" i] .tree-item-inner {
 	background-color: #00599c;
@@ -56,7 +56,7 @@
 }
 
 /* Certbot */
-.nav-folder-title[data-path*="certbot" i] ~ .nav-folder-children { border-left-color: #ef3b39; }
+.nav-folder-title[data-path*="certbot" i] ~ .nav-folder-children { border-left: 1px solid #ef3b39; }
 .nav-folder-title[data-path*="certbot" i] .tree-item-inner,
 .nav-file-title[data-path*="certbot" i] .tree-item-inner {
 	background-color: #ef3b39;
@@ -64,7 +64,7 @@
 }
 
 /* Css */
-.nav-folder-title[data-path*="css" i] ~ .nav-folder-children { border-left-color: #1572b6; }
+.nav-folder-title[data-path*="css" i] ~ .nav-folder-children { border-left: 1px solid #1572b6; }
 .nav-folder-title[data-path*="css" i] .tree-item-inner,
 .nav-file-title[data-path*="css" i] .tree-item-inner {
 	background-color: #1572b6;
@@ -72,7 +72,7 @@
 }
 
 /* Docker */
-.nav-folder-title[data-path*="docker" i] ~ .nav-folder-children { border-left-color: #2496ed; }
+.nav-folder-title[data-path*="docker" i] ~ .nav-folder-children { border-left: 1px solid #2496ed; }
 .nav-folder-title[data-path*="docker" i] .tree-item-inner,
 .nav-file-title[data-path*="docker" i] .tree-item-inner {
 	background-color: #2496ed;
@@ -80,7 +80,7 @@
 }
 
 /* Emagma */
-.nav-folder-title[data-path*="emagma" i] ~ .nav-folder-children { border-left-color: #e41c24; }
+.nav-folder-title[data-path*="emagma" i] ~ .nav-folder-children { border-left: 1px solid #e41c24; }
 .nav-folder-title[data-path*="emagma" i] .tree-item-inner,
 .nav-file-title[data-path*="emagma" i] .tree-item-inner {
 	background-color: #e41c24;
@@ -88,7 +88,7 @@
 }
 
 /* Firefox */
-.nav-folder-title[data-path*="firefox" i] ~ .nav-folder-children { border-left-color: #ff7139; }
+.nav-folder-title[data-path*="firefox" i] ~ .nav-folder-children { border-left: 1px solid #ff7139; }
 .nav-folder-title[data-path*="firefox" i] .tree-item-inner,
 .nav-file-title[data-path*="firefox" i] .tree-item-inner {
 	background-color: #ff7139;
@@ -96,7 +96,7 @@
 }
 
 /* Gdscript */
-.nav-folder-title[data-path*="gdscript" i] ~ .nav-folder-children { border-left-color: #478cbf; }
+.nav-folder-title[data-path*="gdscript" i] ~ .nav-folder-children { border-left: 1px solid #478cbf; }
 .nav-folder-title[data-path*="gdscript" i] .tree-item-inner,
 .nav-file-title[data-path*="gdscript" i] .tree-item-inner {
 	background-color: #478cbf;
@@ -104,7 +104,7 @@
 }
 
 /* Git */
-.nav-folder-title[data-path*="git" i] ~ .nav-folder-children { border-left-color: #f05032; }
+.nav-folder-title[data-path*="git" i] ~ .nav-folder-children { border-left: 1px solid #f05032; }
 .nav-folder-title[data-path*="git" i] .tree-item-inner,
 .nav-file-title[data-path*="git" i] .tree-item-inner {
 	background-color: #f05032;
@@ -112,7 +112,7 @@
 }
 
 /* Html */
-.nav-folder-title[data-path*="html" i] ~ .nav-folder-children { border-left-color: #e34f26; }
+.nav-folder-title[data-path*="html" i] ~ .nav-folder-children { border-left: 1px solid #e34f26; }
 .nav-folder-title[data-path*="html" i] .tree-item-inner,
 .nav-file-title[data-path*="html" i] .tree-item-inner {
 	background-color: #e34f26;
@@ -120,7 +120,7 @@
 }
 
 /* Javascript */
-.nav-folder-title[data-path*="javascript" i] ~ .nav-folder-children { border-left-color: #f7df1e; }
+.nav-folder-title[data-path*="javascript" i] ~ .nav-folder-children { border-left: 1px solid #f7df1e; }
 .nav-folder-title[data-path*="javascript" i] .tree-item-inner,
 .nav-file-title[data-path*="javascript" i] .tree-item-inner {
 	background-color: #f7df1e;
@@ -128,7 +128,7 @@
 }
 
 /* Linux */
-.nav-folder-title[data-path*="linux" i] ~ .nav-folder-children { border-left-color: #fcc624; }
+.nav-folder-title[data-path*="linux" i] ~ .nav-folder-children { border-left: 1px solid #fcc624; }
 .nav-folder-title[data-path*="linux" i] .tree-item-inner,
 .nav-file-title[data-path*="linux" i] .tree-item-inner {
 	background-color: #fcc624;
@@ -136,7 +136,7 @@
 }
 
 /* Llm */
-.nav-folder-title[data-path*="llm" i] ~ .nav-folder-children { border-left-color: #06b6d4; }
+.nav-folder-title[data-path*="llm" i] ~ .nav-folder-children { border-left: 1px solid #06b6d4; }
 .nav-folder-title[data-path*="llm" i] .tree-item-inner,
 .nav-file-title[data-path*="llm" i] .tree-item-inner {
 	background-color: #06b6d4;
@@ -144,7 +144,7 @@
 }
 
 /* Lua */
-.nav-folder-title[data-path*="lua" i] ~ .nav-folder-children { border-left-color: #000080; }
+.nav-folder-title[data-path*="lua" i] ~ .nav-folder-children { border-left: 1px solid #000080; }
 .nav-folder-title[data-path*="lua" i] .tree-item-inner,
 .nav-file-title[data-path*="lua" i] .tree-item-inner {
 	background-color: #000080;
@@ -152,7 +152,7 @@
 }
 
 /* Markdown */
-.nav-folder-title[data-path*="markdown" i] ~ .nav-folder-children { border-left-color: #ffffff; }
+.nav-folder-title[data-path*="markdown" i] ~ .nav-folder-children { border-left: 1px solid #ffffff; }
 .nav-folder-title[data-path*="markdown" i] .tree-item-inner,
 .nav-file-title[data-path*="markdown" i] .tree-item-inner {
 	background-color: #ffffff;
@@ -160,7 +160,7 @@
 }
 
 /* Mermaid */
-.nav-folder-title[data-path*="mermaid" i] ~ .nav-folder-children { border-left-color: #ff3785; }
+.nav-folder-title[data-path*="mermaid" i] ~ .nav-folder-children { border-left: 1px solid #ff3785; }
 .nav-folder-title[data-path*="mermaid" i] .tree-item-inner,
 .nav-file-title[data-path*="mermaid" i] .tree-item-inner {
 	background-color: #ff3785;
@@ -168,7 +168,7 @@
 }
 
 /* Obsidian */
-.nav-folder-title[data-path*="obsidian" i] ~ .nav-folder-children { border-left-color: #8B5CF6; }
+.nav-folder-title[data-path*="obsidian" i] ~ .nav-folder-children { border-left: 1px solid #8B5CF6; }
 .nav-folder-title[data-path*="obsidian" i] .tree-item-inner,
 .nav-file-title[data-path*="obsidian" i] .tree-item-inner {
 	background-color: #8B5CF6;
@@ -176,7 +176,7 @@
 }
 
 /* Php */
-.nav-folder-title[data-path*="php" i] ~ .nav-folder-children { border-left-color: #777BB3; }
+.nav-folder-title[data-path*="php" i] ~ .nav-folder-children { border-left: 1px solid #777BB3; }
 .nav-folder-title[data-path*="php" i] .tree-item-inner,
 .nav-file-title[data-path*="php" i] .tree-item-inner {
 	background-color: #777BB3;
@@ -184,7 +184,7 @@
 }
 
 /* Python */
-.nav-folder-title[data-path*="python" i] ~ .nav-folder-children { border-left-color: #306998; }
+.nav-folder-title[data-path*="python" i] ~ .nav-folder-children { border-left: 1px solid #306998; }
 .nav-folder-title[data-path*="python" i] .tree-item-inner,
 .nav-file-title[data-path*="python" i] .tree-item-inner {
 	background-color: #306998;
@@ -192,7 +192,7 @@
 }
 
 /* Rust */
-.nav-folder-title[data-path*="rust" i] ~ .nav-folder-children { border-left-color: #dea584; }
+.nav-folder-title[data-path*="rust" i] ~ .nav-folder-children { border-left: 1px solid #dea584; }
 .nav-folder-title[data-path*="rust" i] .tree-item-inner,
 .nav-file-title[data-path*="rust" i] .tree-item-inner {
 	background-color: #dea584;
@@ -200,7 +200,7 @@
 }
 
 /* Sql */
-.nav-folder-title[data-path*="sql" i] ~ .nav-folder-children { border-left-color: #cc7832; }
+.nav-folder-title[data-path*="sql" i] ~ .nav-folder-children { border-left: 1px solid #cc7832; }
 .nav-folder-title[data-path*="sql" i] .tree-item-inner,
 .nav-file-title[data-path*="sql" i] .tree-item-inner {
 	background-color: #cc7832;
@@ -208,7 +208,7 @@
 }
 
 /* Sublime Text */
-.nav-folder-title[data-path*="sublime text" i] ~ .nav-folder-children { border-left-color: #ff9800; }
+.nav-folder-title[data-path*="sublime text" i] ~ .nav-folder-children { border-left: 1px solid #ff9800; }
 .nav-folder-title[data-path*="sublime text" i] .tree-item-inner,
 .nav-file-title[data-path*="sublime text" i] .tree-item-inner {
 	background-color: #ff9800;
@@ -216,7 +216,7 @@
 }
 
 /* Sylius */
-.nav-folder-title[data-path*="sylius" i] ~ .nav-folder-children { border-left-color: #22B99A; }
+.nav-folder-title[data-path*="sylius" i] ~ .nav-folder-children { border-left: 1px solid #22B99A; }
 .nav-folder-title[data-path*="sylius" i] .tree-item-inner,
 .nav-file-title[data-path*="sylius" i] .tree-item-inner {
 	background-color: #22B99A;
@@ -224,7 +224,7 @@
 }
 
 /* Symfony */
-.nav-folder-title[data-path*="symfony" i] ~ .nav-folder-children { border-left-color: #000000; }
+.nav-folder-title[data-path*="symfony" i] ~ .nav-folder-children { border-left: 1px solid #ffffff; }
 .nav-folder-title[data-path*="symfony" i] .tree-item-inner,
 .nav-file-title[data-path*="symfony" i] .tree-item-inner {
 	background-color: #000000;
@@ -232,7 +232,7 @@
 }
 
 /* Typescript */
-.nav-folder-title[data-path*="typescript" i] ~ .nav-folder-children { border-left-color: #3178C6; }
+.nav-folder-title[data-path*="typescript" i] ~ .nav-folder-children { border-left: 1px solid #3178C6; }
 .nav-folder-title[data-path*="typescript" i] .tree-item-inner,
 .nav-file-title[data-path*="typescript" i] .tree-item-inner {
 	background-color: #3178C6;
@@ -240,7 +240,7 @@
 }
 
 /* Ubuntu */
-.nav-folder-title[data-path*="ubuntu" i] ~ .nav-folder-children { border-left-color: #E95420; }
+.nav-folder-title[data-path*="ubuntu" i] ~ .nav-folder-children { border-left: 1px solid #E95420; }
 .nav-folder-title[data-path*="ubuntu" i] .tree-item-inner,
 .nav-file-title[data-path*="ubuntu" i] .tree-item-inner {
 	background-color: #E95420;
@@ -248,7 +248,7 @@
 }
 
 /* Windows */
-.nav-folder-title[data-path*="windows" i] ~ .nav-folder-children { border-left-color: #00a4ef; }
+.nav-folder-title[data-path*="windows" i] ~ .nav-folder-children { border-left: 1px solid #00a4ef; }
 .nav-folder-title[data-path*="windows" i] .tree-item-inner,
 .nav-file-title[data-path*="windows" i] .tree-item-inner {
 	background-color: #00a4ef;
