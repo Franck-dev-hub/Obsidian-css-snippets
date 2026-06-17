@@ -41,22 +41,16 @@ function svgFolder(string $color): string {
     return 'url("data:image/svg+xml,' . rawurlencode($svg) . '")';
 }
 
-// File svg
-function svgFile(string $color): string {
-    $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="' . $color . '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.364 13.634a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506l4.013-4.009a1 1 0 0 0-3.004-3.004z"/><path d="M14.487 7.858A1 1 0 0 1 14 7V2"/><path d="M20 19.645V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l2.516 2.516"/><path d="M8 18h1"/></svg>';
+// Folder svg
+function svgFolder(string $color): string {
+    $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="' . $color . '" fill-opacity="0.25" stroke="' . $color . '" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>';
     return 'url("data:image/svg+xml,' . rawurlencode($svg) . '")';
 }
 
-function generateBlock(string $name, string $color, string $textColor): string {
-    $title = ucwords($name);
-    $folderIcon = svgFolder($color);
-    $fileIcon   = svgFile($color);
-    return "/* --- $title --- */\n"
-        . ".nav-folder-title[data-path*=\"$name\" i] .tree-item-inner,\n"
-        . ".nav-file-title[data-path*=\"$name\" i] .tree-item-inner { background-color: $color; color: $textColor;}\n"
-        . ".nav-folder-title[data-path*=\"$name\" i] ~ .nav-folder-children { border-left: 1px solid $color; }\n"
-        . ".nav-folder-title[data-path*=\"$name\" i]::before { content: $folderIcon; }\n"
-        . ".nav-file-title[data-path*=\"$name\" i]::before   { content: $fileIcon; }\n";
+// File svg
+function svgFile(string $color): string {
+    $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="' . $color . '" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.364 13.634a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506l4.013-4.009a1 1 0 0 0-3.004-3.004z"/><path d="M14.487 7.858A1 1 0 0 1 14 7V2"/><path d="M20 19.645V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l2.516 2.516"/><path d="M8 18h1"/></svg>';
+    return 'url("data:image/svg+xml,' . rawurlencode($svg) . '")';
 }
 
 $defaultFolder = svgFolder('#888888');
