@@ -24,10 +24,7 @@
 
 /* Active file */
 .nav-file-title.is-active {
-    color: white !important;
-    font-weight: 700;
     font-style: italic;
-    background-color: var(--primary) !important;
     border-radius: 4px;
     border-left: none;
 }
@@ -39,12 +36,14 @@
 
 /* Text before the active file title*/
 .nav-file-title.is-active::before {
+    font-weight: 900;
     content: ">>>";
     margin-right: 4px;
 }
 
 /* Text after the active file title*/
 .nav-file-title.is-active::after {
+    font-weight: 900;
     content: "<<<";
     margin-left: 4px;
 }
