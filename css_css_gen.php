@@ -1,5 +1,4 @@
 <?php
-
 $output_file_name = "language_folder.css";
 
 $folders = [
@@ -15,7 +14,7 @@ $folders = [
     [ "name" => "emagma",       "color" => "#e41c24", "textColor" => "#ffffff"],
     [ "name" => "firefox",      "color" => "#ff7139", "textColor" => "#000000"],
     [ "name" => "gdscript",     "color" => "#478cbf", "textColor" => "#000000"],
-    [ "name" => "git",          "color" => "#f05032", "textColor" => "#000000"],
+    [ "name" => "git",          "color" => "#f05032", "textColor" => "#ffffff"],
     [ "name" => "html",         "color" => "#e34f26", "textColor" => "#000000"],
     [ "name" => "js",           "color" => "#f7df1e", "textColor" => "#000000"],
     [ "name" => "linux",        "color" => "#fcc624", "textColor" => "#000000"],
@@ -25,7 +24,7 @@ $folders = [
     [ "name" => "php",          "color" => "#777BB3", "textColor" => "#ffffff"],
     [ "name" => "python",       "color" => "#306998", "textColor" => "#FFD43B"],
     [ "name" => "rust",         "color" => "#dea584", "textColor" => "#000000"],
-    [ "name" => "sql",          "color" => "#cc7832", "textColor" => "#000000"],
+    [ "name" => "sql",          "color" => "#cc7832", "textColor" => "#ffffff"],
     [ "name" => "sublime text", "color" => "#ff9800", "textColor" => "#000000"],
     [ "name" => "sylius",       "color" => "#22B99A", "textColor" => "#ffffff"],
     [ "name" => "symfony",      "color" => "#000000", "textColor" => "#ffffff"],
@@ -35,10 +34,10 @@ $folders = [
 
 function generateBlock(string $name, string $color, string $textColor): string {
     $title = ucwords($name);
+    $style = "color: $textColor; background-color: $color;";
     return "/* $title */\n"
-        // Main folder
-        . ".nav-folder-title[data-path\$=\"/$name\" i],\n"
-        . ".nav-folder-title[data-path=\"$name\" i] { color: $textColor; background-color: $color; }\n";
+        . ".nav-folder-title[data-path*=\"$name\" i] { $style }\n"
+        . ".nav-file-title[data-path*=\"$name\" i] { $style }\n";
 }
 
 $output = implode("\n", array_map(
