@@ -1,0 +1,113 @@
+/* ============================================================
+   Human Languages — language_human.css
+   Folder: Perso/Langues
+   ============================================================ */
+
+/* Common */
+.nav-folder-title[data-path$="/Langues"] .tree-item-inner,
+.nav-folder-title[data-path="Langues"] .tree-item-inner,
+.nav-file-title[data-path*="/Langues/"] .tree-item-inner { color: #ffffff; }
+
+.nav-folder-title[data-path$="/Langues"] ~ .nav-folder-children,
+.nav-folder-title[data-path="Langues"] ~ .nav-folder-children { border-left: 1px solid #3b82f6; }
+
+.nav-folder-title[data-path$="/Langues"]::before,
+.nav-folder-title[data-path="Langues"]::before,
+.nav-file-title[data-path*="/Langues/"]::before {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-right: 6px;
+	vertical-align: middle;
+}
+
+/* --- Langues (globe) --- */
+.nav-folder-title[data-path$="/Langues"]::before,
+.nav-folder-title[data-path="Langues"]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='%233b82f6'%3E%3Cpath d='M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10,10-4.48,10-10S17.52,2,12,2zm-1,17.93c-3.95-.49-7-3.85-7-7.93,0-.62.08-1.21.21-1.79L9,15v1c0,1.1.9,2,2,2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8V9h2c.55,0,1-.45,1-1V6h2c1.1,0,2-.9,2-2v-.41c2.93,1.19,5,4.06,5,7.41,0,2.08-.8,3.97-2.1,5.39z'/%3E%3C/svg%3E");
+}
+
+/* --- Arabic    ع  #007A3D --- */
+.nav-file-title[data-path*="arabic" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='12' font-weight='bold' text-anchor='middle' fill='%23007A3D'%3E%D8%B9%3C/text%3E%3C/svg%3E");
+}
+
+/* --- Bengali   ব  #006a4e --- */
+.nav-file-title[data-path*="bengali" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='12' font-weight='bold' text-anchor='middle' fill='%23006a4e'%3E%E0%A6%AC%3C/text%3E%3C/svg%3E");
+}
+
+/* --- Chinese   中  #de2910 --- */
+.nav-file-title[data-path*="chinese" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='11' font-weight='bold' text-anchor='middle' fill='%23de2910'%3E%E4%B8%AD%3C/text%3E%3C/svg%3E");
+}
+
+/* --- French    É  #0055A4 --- */
+.nav-file-title[data-path*="french" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='12' font-weight='bold' text-anchor='middle' fill='%230055A4'%3E%C3%89%3C/text%3E%3C/svg%3E");
+}
+
+/* --- German    ß  #FFCE00 --- */
+.nav-file-title[data-path*="german" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='12' font-weight='bold' text-anchor='middle' fill='%23FFCE00'%3E%C3%9F%3C/text%3E%3C/svg%3E");
+}
+
+/* --- Greek     Ω  #0D5EAF --- */
+.nav-file-title[data-path*="greek" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='12' font-weight='bold' text-anchor='middle' fill='%230D5EAF'%3E%CE%A9%3C/text%3E%3C/svg%3E");
+}
+
+/* --- Hebrew    א  #0038b8 --- */
+.nav-file-title[data-path*="hebrew" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='12' font-weight='bold' text-anchor='middle' fill='%230038b8'%3E%D7%90%3C/text%3E%3C/svg%3E");
+}
+
+/* --- Hindi     ह  #ff9933 --- */
+.nav-file-title[data-path*="hindi" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='12' font-weight='bold' text-anchor='middle' fill='%23ff9933'%3E%E0%A4%B9%3C/text%3E%3C/svg%3E");
+}
+
+/* --- Italian   È  #009246 --- */
+.nav-file-title[data-path*="italian" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='12' font-weight='bold' text-anchor='middle' fill='%23009246'%3E%C3%88%3C/text%3E%3C/svg%3E");
+}
+
+/* --- Japanese  日  #bc002d --- */
+.nav-file-title[data-path*="japanese" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='11' font-weight='bold' text-anchor='middle' fill='%23bc002d'%3E%E6%97%A5%3C/text%3E%3C/svg%3E");
+}
+
+/* --- Korean    한  #003478 --- */
+.nav-file-title[data-path*="korean" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='10' font-weight='bold' text-anchor='middle' fill='%23003478'%3E%ED%95%9C%3C/text%3E%3C/svg%3E");
+}
+
+/* --- Persian   ف  #239f40 --- */
+.nav-file-title[data-path*="persian" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='12' font-weight='bold' text-anchor='middle' fill='%23239f40'%3E%D9%81%3C/text%3E%3C/svg%3E");
+}
+
+/* --- Portuguese  Ã  #009c3b --- */
+.nav-file-title[data-path*="portuguese" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='12' font-weight='bold' text-anchor='middle' fill='%23009c3b'%3E%C3%83%3C/text%3E%3C/svg%3E");
+}
+
+/* --- Russian   Я  #1C3578 --- */
+.nav-file-title[data-path*="russian" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='12' font-weight='bold' text-anchor='middle' fill='%231C3578'%3E%D0%AF%3C/text%3E%3C/svg%3E");
+}
+
+/* --- Spanish   Ñ  #c60b1e --- */
+.nav-file-title[data-path*="spanish" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='12' font-weight='bold' text-anchor='middle' fill='%23c60b1e'%3E%C3%91%3C/text%3E%3C/svg%3E");
+}
+
+/* --- Thai      ก  #a51931 --- */
+.nav-file-title[data-path*="thai" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='12' font-weight='bold' text-anchor='middle' fill='%23a51931'%3E%E0%B8%81%3C/text%3E%3C/svg%3E");
+}
+
+/* --- Turkish   Ğ  #e30a17 --- */
+.nav-file-title[data-path*="turkish" i]::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Ctext x='7' y='11' font-size='12' font-weight='bold' text-anchor='middle' fill='%23e30a17'%3E%C4%9E%3C/text%3E%3C/svg%3E");
+}
