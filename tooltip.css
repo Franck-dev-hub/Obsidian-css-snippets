@@ -1,27 +1,27 @@
 /* Tooltip styles for Obsidian */
 
+body {
+  --tooltip-bg: hsla(var(--interactive-accent-hsl), 0.9);
+}
+
 .tooltip {
-  background-color: var(--red);
+  background-color: var(--tooltip-bg);
   color: black;
   word-wrap: break-word;
 }
 
 .tooltip .tooltip-arrow {
-  border-bottom: 5px solid var(--red);
+  border-bottom: 5px solid var(--tooltip-bg);
 }
 
 .tooltip.mod-right .tooltip-arrow {
-  border-right: 5px solid var(--red);
+  border-right: 5px solid var(--tooltip-bg);
 }
 
 .tooltip.mod-left .tooltip-arrow {
-  border-left: 5px solid var(--red);
+  border-left: 5px solid var(--tooltip-bg);
 }
 
 .tooltip.mod-top .tooltip-arrow {
-  border-top: 5px solid var(--red);
-}
-
-body {
-  --red: hsla(var(--interactive-accent-hsl), 0.9);
+  border-top: 5px solid var(--tooltip-bg);
 }
